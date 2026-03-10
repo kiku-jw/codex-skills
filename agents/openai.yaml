@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Shaping"
+  short_description: "Use the smallest product framework and name the right execution lane"
+  default_prompt: "Shape this product work with the minimum useful framework, produce a compact decision-ready brief, and route it into the right execution lane."
