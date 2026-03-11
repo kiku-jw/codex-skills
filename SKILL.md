@@ -45,6 +45,7 @@ This skill works with:
    - Why someone might care.
 3. Map it to current work.
    - Check active repos, current issues, recent work, or known priorities from the conversation.
+   - If work is tracked in GitHub, map to the canonical issue or suggest creating one.
    - If nothing real matches, say so plainly.
 4. Give one verdict.
    - `Apply now`
