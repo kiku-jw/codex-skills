@@ -15,6 +15,11 @@ Good default locations:
 - `docs/architecture-decisions.md`
 - `docs/adr/ADR-001-<slug>.md`
 
+## Numbering
+
+- Use sequential `ADR-001`, `ADR-002`, etc.
+- If the repo already uses another scheme, follow it.
+
 ## Issue-first cases
 
 Use a GitHub issue summary when:

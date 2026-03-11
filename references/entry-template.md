@@ -24,6 +24,10 @@ Use a compact shape that preserves the trade-off.
 **Revisit if:** What would make this worth revisiting.
 ```
 
+## Default path
+
+If no ADR system exists yet, default to `docs/adr/ADR-001-<slug>.md` or `docs/architecture-decisions.md`.
+
 ## Superseding rule
 
 If a prior ADR is replaced:
