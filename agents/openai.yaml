@@ -1,0 +1,4 @@
+interface:
+  display_name: "Illustration Prompt"
+  short_description: "Turn vague image ideas and refs into precise generator-ready prompts"
+  default_prompt: "Use $illustration-prompt to interview me briefly, analyze any references I share, and produce a structured English image prompt with clear scene, style, palette, format, and negative constraints."
