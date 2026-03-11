@@ -1,0 +1,4 @@
+interface:
+  display_name: "README Generator"
+  short_description: "Create or refresh human-first README files without doc bloat"
+  default_prompt: "Use $readme-generator to create or rewrite this repo's README as a human-first project page with a truthful quick start and only the sections that reduce confusion."
