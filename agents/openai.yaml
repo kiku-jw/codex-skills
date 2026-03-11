@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Council"
+  short_description: "Stress test product decisions with explicit multi-lens roles"
+  default_prompt: "Use $product-council to evaluate this product decision with named lenses, real evidence, explicit disagreements, and a clear go/no-go recommendation."
