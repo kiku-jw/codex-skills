@@ -29,6 +29,7 @@ Default workflow:
    - diffs, issue notes, decisions, metrics, screenshots, or demo results
 2. Choose the artifact type.
    - Read `references/artifact-types.md`.
+   - Read `references/storage.md` for default save locations.
 3. Draft the outline first.
    - keep it short and concrete
 4. Write the draft in plain English.
