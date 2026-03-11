@@ -44,6 +44,7 @@ Default workflow:
    - Use one of the templates in `assets/templates/` when helpful.
 4. Save the file in a sensible workspace location.
    - Prefer a descriptive filename.
+   - If no location is specified, use `./artifacts/visual-explainer/` or `/tmp/visual-explainer` as fallback.
 5. If browser tooling is available, open or inspect the result.
 6. Return the file path and a short note about what it shows.
 
@@ -60,6 +61,10 @@ Default workflow:
 - Output should be one self-contained `.html` file unless the user asks otherwise.
 - Inline CSS and small JS are preferred for portability.
 - Use CDN assets only when they materially help, such as Mermaid or Chart.js.
+- If possible, open the file:
+  - macOS: `open <file>`
+  - Linux: `xdg-open <file>`
+  - Windows: `start <file>`
 
 ## References
 
