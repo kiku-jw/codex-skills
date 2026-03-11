@@ -46,12 +46,27 @@ Default workflow:
    - what to avoid
    - whether the right answer is still to build it ourselves
 
+## Output format
+
+Return a short table and a final recommendation:
+
+```
+| Tool | Type | Maturity | Why it fits | Main limits | Link |
+```
+
+Then end with:
+
+- `Try first`
+- `Avoid for now`
+- `Build ourselves`
+
 Read `references/evaluation-matrix.md` for the comparison frame.
 Read `references/search-patterns.md` for query patterns and source priorities.
 
 ## Rules
 
 - Use web research because tool ecosystems change fast.
+- Verify recent activity (release date, docs update, or repo activity).
 - Do not recommend dead, abandoned, or obviously stale options.
 - Do not pad the list with mediocre tools.
 - Say directly when the task is simple enough that custom code is the better move.
