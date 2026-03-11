@@ -39,3 +39,8 @@ Read `references/patterns.md` for the main signatures to remove.
 - Do not add marketing energy the draft did not ask for.
 - If the draft needs reporting or factual repair, say that detox alone is not enough.
 - For journalism-like copy, suggest a stricter newsroom-style pass only if that workflow exists in the current environment.
+
+## Output
+
+- Return the cleaned draft.
+- Add a short `Changes` list with 3-5 bullets describing what you removed or simplified.
