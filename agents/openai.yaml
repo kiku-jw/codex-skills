@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triage Finding"
+  short_description: "Turn an external finding into a clear verdict and next action"
+  default_prompt: "Use $triage-finding to inspect this external finding, explain it plainly, map it to our current work, and give one honest verdict with the smallest useful next action."
