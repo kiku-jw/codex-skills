@@ -37,6 +37,8 @@ Walk step by step, but collapse or confirm steps that are already known from the
    - Strongly prefer 2-5 references when available.
    - If refs are provided, read `references/reference-analysis.md`.
    - Ask what exactly should be borrowed and what should not be borrowed from each ref.
+   - Ask which reference is primary when they conflict.
+   - Ask which generator or model they plan to use (optional).
 4. `Scene`
    - Offer 2-3 scene directions when the brief is vague.
    - Then lock the main subject, supporting elements, camera angle, and what story the image should tell.
