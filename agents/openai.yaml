@@ -1,0 +1,4 @@
+interface:
+  display_name: "Execution Pack"
+  short_description: "Build a Codex operating pack with plan, status, tests, backlog, and prompts"
+  default_prompt: "Turn this raw input or PRD into a Codex execution pack with AGENTS.md, PLAN, STATUS, TEST_PLAN, BACKLOG, and optional prompt surfaces for execution, resume, review, and blocker compression."
