@@ -4,9 +4,12 @@ Codex skill for researching current tools, services, MCP servers, APIs, models, 
 
 ## What it does
 
-- researches current options for a concrete task
-- compares only the strongest candidates by fit and maturity
-- prioritizes official docs, repos, and pricing pages
+- researches current options for a concrete task across web, GitHub, MCP catalogs, awesome-lists, and finalist package checks
+- picks sources adaptively instead of running the same search pattern every time
+- compares only the strongest candidates by fit, maturity, and integration cost
+- aggregates signals such as GitHub stars and archived status
+- deduplicates tools found across several sources
+- calls out trivial tasks where custom code beats tool shopping
 - ends with a recommendation instead of a giant list
 
 ## Repository layout
@@ -22,6 +25,7 @@ Codex skill for researching current tools, services, MCP servers, APIs, models, 
 - `what should we use for X`
 - `research options before we build`
 - `is there an MCP for this`
+- `find a library for PDF generation on Python`
 
 ## License
 
