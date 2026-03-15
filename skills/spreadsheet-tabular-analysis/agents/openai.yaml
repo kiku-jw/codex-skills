@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spreadsheet Tabular Analysis"
+  short_description: "Analyze spreadsheet or CSV data into stable outputs"
+  default_prompt: "Use $spreadsheet-tabular-analysis to analyze this spreadsheet or CSV data and write stable output files with checked metrics."
