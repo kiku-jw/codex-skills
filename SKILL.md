@@ -1,46 +1,30 @@
 ---
 name: ai-writing-detox
-description: Remove obvious AI-writing tics from drafts so the text sounds credible, calm, and human. Trigger on requests like make this sound less AI, detox this draft, polish this post, clean up this README copy, edit for trust, or before publishing any public-facing writing where generic LLM style would hurt credibility.
+description: Remove obvious AI-writing tics from drafts so the text sounds credible, calm, and human. Trigger on requests like make this sound less AI, detox this draft, or clean up public-facing copy before publishing.
 ---
 
 # AI Writing Detox
 
-Use this skill when a draft is directionally fine but still reads like generic model output.
+## Metadata
+- Trigger when: the draft is directionally fine, but its tone, rhythm, or phrasing still reads like generic model output.
+- Do not use when: the draft primarily needs factual reporting, structural rewriting, or a new argument rather than style cleanup.
 
-Typical prompts:
+## Skill Purpose
 
-- `make this sound less AI`
-- `detox this draft`
-- `polish this post before publishing`
-- `clean up this README copy`
-- `remove AI tics from this`
+Remove empty hype, fake authority, and synthetic rhythm while preserving the author’s actual meaning and tone.
 
-## Core Principle
+## Instructions
+1. Inspect the draft and preserve its real intent, structure, and voice. Read `/Users/nick/.codex/skills/ai-writing-detox/references/patterns.md` only when you need the pattern sheet for common AI markers.
+2. Edit for credibility: cut throat-clearing, inflated abstractions, repetitive cadence, and bland transitions; replace them with concrete nouns, verbs, and cleaner rhythm.
+3. Return the cleaned draft plus a short note on what changed. If detox alone is not enough because the copy is factually weak or structurally broken, say that explicitly instead of over-polishing it.
 
-Credibility beats flourish.
-
-Default workflow:
-
-`identify AI markers -> cut empty language -> smooth rhythm -> keep meaning -> return cleaner draft`
-
-Read `references/patterns.md` for the main signatures to remove.
-
-## What to do
-
-1. Keep the meaning and structure unless they are part of the problem.
-2. Remove empty hype, throat-clearing, and fake authority.
-3. Fix choppy AI rhythm.
-4. Prefer concrete nouns and verbs over puffed-up abstractions.
-5. Preserve the user's actual tone instead of flattening it into generic "professional" prose.
-
-## Rules
-
-- Do not make the text more corporate in the name of polish.
-- Do not add marketing energy the draft did not ask for.
-- If the draft needs reporting or factual repair, say that detox alone is not enough.
-- For journalism-like copy, suggest a stricter newsroom-style pass only if that workflow exists in the current environment.
+## Non-Negotiable Acceptance Criteria
+- Meaning stays intact unless the meaning itself was the problem.
+- The edit does not become more corporate, more salesy, or more generic than the source draft.
+- If factual repair is required, the skill says so instead of hiding behind smoother prose.
+- The finished draft sounds human because it is more specific and calm, not because it adds flair.
 
 ## Output
-
-- Return the cleaned draft.
-- Add a short `Changes` list with 3-5 bullets describing what you removed or simplified.
+- The cleaned draft.
+- A short `Changes` list with 3-5 bullets describing what was removed, tightened, or made more concrete.
+- An explicit note if the draft still needs reporting, restructuring, or fact-checking beyond detox.
