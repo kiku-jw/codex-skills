@@ -1,4 +1,4 @@
 interface:
   display_name: "Tool Scout"
-  short_description: "Search current tools across multiple sources and recommend the best-fit option"
+  short_description: "Research current tools and recommend the best fit"
   default_prompt: "Use $tool-scout to research current options for this task across the web, GitHub, and other relevant discovery sources, deduplicate the candidates, compare only the strongest ones, and recommend what we should try first."
