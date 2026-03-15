@@ -1,92 +1,31 @@
 ---
 name: product-council
-description: Use when a product decision is fuzzy, risky, or high-impact and you want a multi-lens council. Trigger on requests like council, product review, go-to-market debate, wedge selection, pricing debate, roadmap prioritization, launch readiness, pre-mortem, or go/no-go review. Use explicit archetypes with evidence and anti-goals, not cosplay of real people.
+description: Run a multi-lens council when a product decision is fuzzy, risky, or high-impact and one answer is not enough. Use for wedge selection, pricing, launch readiness, roadmap trade-offs, go/no-go calls, or other decisions where blind spots matter more than speed.
 ---
 
 # Product Council
 
-Use this skill when one smart answer is not enough and the risk is in blind spots.
+## Metadata
+- Trigger when: the decision is important enough that multiple explicit lenses would reduce blind spots or hidden risk.
+- Do not use when: the task is a trivial copy tweak, obvious bug fix, or any decision where one clear answer is already enough.
 
-Typical prompts:
+## Skill Purpose
 
-- `run a product council on this`
-- `stress test this product idea`
-- `I need multiple perspectives before we commit`
-- `do a go/no-go review`
-- `what would a skeptical council say`
-- `run a pricing council`
-- `do a roadmap council`
-- `help me choose the wedge`
+Force meaningful disagreement across named lenses that optimize for different evidence and failure modes, then synthesize that disagreement into one recommendation.
 
-## Core Principle
+## Instructions
+1. Start with one short decision brief covering problem, target user, current workaround, proposed move, key risks, and the actual decision to be made.
+2. Choose 3-5 lenses and run them on the same evidence base. Use `/Users/nick/.codex/skills/product-council/references/roles.md` for role definitions and `/Users/nick/.codex/skills/product-council/references/council-templates.md` when a named template fits the decision better than the default council.
+3. Synthesize the council into consensus points, disagreements, hidden assumptions, evidence that would change a mind, and one final recommendation: go, no-go, or proceed only after specific validation.
 
-Use named lenses, not celebrity cosplay.
+## Non-Negotiable Acceptance Criteria
+- Use named lenses, not celebrity cosplay or fake authority.
+- All lenses reason from the same facts.
+- The council produces one recommendation rather than a pile of unranked commentary.
+- Evidence outranks performance; the exercise exists to reduce blind spots, not to sound grand.
 
-Good council roles are explicit about:
-
-- what they optimize for
-- what evidence they trust
-- what failure they fear
-- what anti-patterns they reject
-
-Bad councils imitate famous personalities and import fake authority.
-
-## Default Council
-
-Use 3-5 lenses depending on the decision:
-
-1. `Product Strategist`
-   - asks whether the wedge, buyer, and outcome are sharp enough
-2. `Operator Skeptic`
-   - asks what breaks in execution, support, onboarding, and workflow reality
-3. `Distribution / GTM`
-   - asks how this reaches users and why they would care now
-4. `User Value`
-   - asks whether this removes a painful recurring job or only looks clever
-5. `Risk / Economics`
-   - asks about cost, reversibility, and downside if we are wrong
-
-Read `references/roles.md` for the role sheet.
-Read `references/council-templates.md` when the user wants a council shaped for a specific decision type.
-
-## What to do
-
-1. Start with a short decision brief.
-   - problem
-   - target user
-   - current workaround
-   - proposed move
-   - key risks
-   - what decision is actually being made
-2. Run each lens on the same evidence base.
-   - Do not feed different facts to different roles.
-3. Force disagreement into the open.
-   - consensus
-   - disagreements
-   - hidden assumptions
-   - what evidence would change a mind
-4. End with one recommendation.
-   - go
-   - no-go
-   - proceed only after specific validation
-
-## Template Selection
-
-- Use the default council when the decision is broad and you mainly need blind-spot reduction.
-- Use a named template when the user is deciding one concrete thing such as wedge, pricing, roadmap, or launch.
-- Prefer the smallest council that still captures the real disagreement.
-
-Default named templates live in `references/council-templates.md`.
-
-## When to Use Subagents
-
-- Use subagents only when the decision is substantial and the lenses can reason independently.
-- For small decisions, keep the council in one thread.
-
-## Rules
-
-- Do not use this for trivial copy tweaks or obvious bug fixes.
-- Do not roleplay real people unless the user explicitly asks for it.
-- If the user does ask for real people, translate them into principles and disclaim that this is an approximation, not a simulation.
-- Evidence beats style.
-- The council exists to reduce blind spots, not to make the answer sound grander.
+## Output
+- The decision brief.
+- Lens-by-lens findings plus explicit disagreements.
+- A final recommendation with the key gate or proof needed to move forward.
+- `Next skill options` (only if needed): `$idea-validation` — get real buyer/pain/proof signal before committing; `$product-shaping` — structure the chosen product question into one framework; `$spec-bundle` — turn the chosen direction into implementation-ready artifacts; `$adr-log` — record the decision if it is now durable enough.
