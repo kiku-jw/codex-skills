@@ -1,0 +1,4 @@
+interface:
+  display_name: Skill Installer
+  short_description: List and install Codex skills from curated or GitHub sources
+  default_prompt: Use $skill-installer to list the available skills or install the one I specify into my local Codex skills directory.

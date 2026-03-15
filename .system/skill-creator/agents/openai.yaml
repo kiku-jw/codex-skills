@@ -1,0 +1,4 @@
+interface:
+  display_name: Skill Creator
+  short_description: Create or refactor Codex skills with a strict harness contract
+  default_prompt: Use $skill-creator to rewrite this skill into a narrow, reliable harness with explicit non-negotiables and output format.

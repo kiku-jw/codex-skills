@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Review"
+  short_description: "Run skeptical second-pass reviews for risky changes"
+  default_prompt: "Review this change adversarially for bugs, regressions, security risks, and missing tests. Findings first."

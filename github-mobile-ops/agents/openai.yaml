@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Mobile Ops"
+  short_description: "Design phone-first GitHub control workflows"
+  default_prompt: "Shape a phone-first GitHub workflow using Issues as canonical state, Projects as operator view, and GitHub Mobile as the control surface."

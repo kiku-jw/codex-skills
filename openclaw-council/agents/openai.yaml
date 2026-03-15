@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenClaw Council"
+  short_description: "Stress-test OpenClaw plans with multi-pass review"
+  default_prompt: "Run a council-style review on this OpenClaw plan, surface contradictions and risks, then produce a go/no-go recommendation."
