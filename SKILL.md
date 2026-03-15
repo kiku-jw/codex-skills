@@ -1,87 +1,30 @@
 ---
 name: illustration-prompt
-description: Turn vague image requests into generator-ready illustration prompts for Midjourney, DALL-E, Flux, Stable Diffusion, or similar tools. Trigger on requests like illustration prompt, prompt for image, visual direction, art prompt, moodboard prompt, hero image prompt, Midjourney prompt, DALL-E prompt, Flux prompt, or when the user wants help describing an image precisely. Especially useful when the user has reference images and wants the prompt to inherit the right style cues without copying them blindly.
+description: Turn a vague image request into a generator-ready illustration prompt for Midjourney, DALL-E, Flux, Stable Diffusion, or similar tools. Use when the user needs visual direction, prompt structure, or reference-aware image prompting rather than image generation code.
 ---
 
 # Illustration Prompt
 
-Use this skill when the main task is visual direction and prompt quality, not coding.
+## Metadata
+- Trigger when: the real work is turning a visual idea plus references into a high-quality prompt.
+- Do not use when: the user already has a finished prompt or wants direct generation without prompt design.
 
-Typical prompts:
+## Skill Purpose
 
-- `write an illustration prompt`
-- `turn this vague idea into a Midjourney prompt`
-- `help me make an image prompt from these refs`
-- `I need a hero image prompt for this page`
-- `make this visual brief more precise`
+Translate vague visual intent into a concrete, reference-aware prompt that a generator can follow without leaning on hand-wavy adjective soup.
 
-## Core Principle
+## Instructions
+1. Lock the brief in this order: placement/context, style family, detail density, references, scene, palette/mood, and format. Collapse questions that the conversation already answered; do not re-interview for sport.
+2. If references are present, summarize what should be borrowed and what should not. Read `~/.codex/skills/illustration-prompt/references/reference-analysis.md` when you need the reference-reading checklist and `~/.codex/skills/illustration-prompt/references/prompt-template.md` for the 8-block prompt structure.
+3. Return one structured prompt in English plus a short filename and only the minimal model-specific tweak when it materially changes the result. If the user wants actual generation afterward, hand off to whatever image-generation tool is available in the current environment.
 
-References and context beat adjectives.
-
-Default workflow:
-
-`context -> style -> references -> scene -> palette -> format -> structured prompt -> targeted iteration`
-
-## Interview Flow
-
-Walk step by step, but collapse or confirm steps that are already known from the conversation.
-
-1. `Context`
-   - Where will the image live: hero, card, social post, slide, cover, app icon, background, illustration inside a feature page.
-   - If the project context is already known, reuse it instead of asking generic questions.
-2. `Style`
-   - Confirm or propose style families: isometric, flat, voxel, watercolor, photoreal, 3D render, collage, line art, pixel art, editorial illustration, and so on.
-   - Ask about detail density: minimal, medium, rich.
-3. `References`
-   - Strongly prefer 2-5 references when available.
-   - If refs are provided, read `references/reference-analysis.md`.
-   - Ask what exactly should be borrowed and what should not be borrowed from each ref.
-   - Ask which reference is primary when they conflict.
-   - Ask which generator or model they plan to use (optional).
-4. `Scene`
-   - Offer 2-3 scene directions when the brief is vague.
-   - Then lock the main subject, supporting elements, camera angle, and what story the image should tell.
-5. `Palette and Mood`
-   - Ask for theme, brand colors, mood, and lighting.
-   - Reuse project colors, CSS variables, or known design tokens when they exist.
-6. `Format`
-   - Confirm aspect ratio, size, and background behavior.
-   - If the user does not know the size, recommend one based on context.
-
-## Reference-First Rules
-
-- If the user provides references, summarize the shared patterns before drafting.
-- Name the traits you will carry forward:
-  - composition
-  - perspective
-  - shape language
-  - texture or material feel
-  - palette
-  - lighting
-  - detail density
-  - negative space
-- If the refs conflict, call out the tension instead of faking coherence.
-- If there are no refs, compensate by asking more concrete scene and palette questions.
+## Non-Negotiable Acceptance Criteria
+- References and explicit scene constraints outrank decorative adjectives.
+- Conflicting references are called out instead of blended into fake coherence.
+- Perspective, composition, palette, material cues, and count-sensitive objects are concrete when they matter.
+- Default to `no text` in the image unless the user explicitly asks for text.
 
 ## Output
-
-After the interview, output:
-
-1. A short kebab-case file name.
-2. One structured prompt in English using the 8-block format from `references/prompt-template.md`.
-3. Optional short generator note only when a model-specific tweak matters.
-
-## Prompt Quality Rules
-
-- Be concrete about perspective, light direction, scale, and material cues.
-- Use HEX colors when known.
-- Default to `no text` unless the user explicitly wants text inside the image.
-- If people are visible, describe poses and keep anatomy constraints explicit.
-- If 3 or more identical objects matter, state the exact count and placement.
-- Revise by editing specific blocks, not by rewriting everything from scratch.
-
-## Handoff
-
-- If the user wants only the prompt, stop after the structured output.
-- If the user also wants the image generated here, hand off to [$imagegen](~/.codex/skills/imagegen/SKILL.md) after the prompt is approved.
+- A short kebab-case filename.
+- One structured English prompt using the 8-block format.
+- An optional short generator note only when a model-specific tweak genuinely matters.
