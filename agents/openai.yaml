@@ -1,4 +1,4 @@
 interface:
   display_name: "Visual Explainer"
-  short_description: "Turn complex structure into a clean self-contained HTML explainer"
+  short_description: "Turn complex structure into a clean HTML explainer"
   default_prompt: "Use $visual-explainer to choose the right visual format for this material, generate a self-contained HTML artifact, and make the result readable in a browser."
