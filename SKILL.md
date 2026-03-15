@@ -1,53 +1,30 @@
 ---
 name: continuity-ledger
-description: "Keep substantial work coherent across long sessions or context compaction with a short factual CONTINUITY.md: sources of truth, goal, constraints, decisions, evidence, done/now/next, and open questions."
+description: Keep substantial work coherent across long sessions or compaction with one short factual `CONTINUITY.md` covering sources of truth, goal, constraints, decisions, evidence, and done/now/next state. Use when session drift would otherwise become a real risk.
 ---
 
 # Continuity Ledger
 
-Use this skill when a task is likely to span sessions, long tool loops, or multiple branches.
+## Metadata
+- Trigger when: the task is long enough, branchy enough, or interruption-prone enough that chat memory is no longer a safe source of truth.
+- Do not use when: an existing issue, brief, or spec bundle already serves as current durable state and no extra memory layer is needed.
 
-Typical prompts:
+## Skill Purpose
 
-- `keep continuity on this task`
-- `update the ledger`
-- `this task is too long for chat memory`
-- `stabilize the session state`
-- `don't lose the thread`
+Keep one compact, factual continuity file that lets the next session resume work without reconstructing the project state from chat history.
 
-## What to do
+## Instructions
+1. Gate the need for a ledger first. If a better durable artifact already exists and is current, reuse it instead of creating a second memory layer. When you do need a ledger, read `/Users/nick/.codex/skills/continuity-ledger/references/template.md` for the minimal section set.
+2. Read the current `CONTINUITY.md` before substantial work and update it only when goals, constraints, decisions, evidence, or done/now/next state actually changed. Keep it short, factual, and bullet-based.
+3. Validate the ledger. Mark uncertain items as `UNCONFIRMED`, update higher-authority source artifacts first when architecture or test state changed, and make sure the ledger points back to those sources instead of duplicating them.
 
-1. Use one repo-local `CONTINUITY.md` only when it clearly reduces drift.
-2. Read the ledger before continuing substantial work.
-3. Keep it short and factual. Update only when goals, constraints, decisions, status, or evidence change.
-4. Prefer these sections:
-   - `Sources of Truth` when a bundle, issue, or brief already owns the real details
-   - `Goal`
-   - `Constraints`
-   - `Decisions`
-   - `Evidence`
-   - `State` with `Done`, `Now`, `Next`
-   - `Open Questions`
-5. Mark uncertain items as `UNCONFIRMED`.
-6. If a better durable artifact already exists and is current, do not create a second memory layer.
-   - Prefer the existing GitHub issue, execution brief, or spec bundle.
-7. When architecture, contracts, tests, or gates change, update those source artifacts first or in the same pass, then note the result in the ledger.
-8. If context looks compacted or fragmented, rebuild the ledger from visible facts first, then ask only the minimum missing questions.
+## Non-Negotiable Acceptance Criteria
+- At most one repo-local continuity ledger exists for the task.
+- The ledger contains stable facts and actionable status, not chat transcript or vibes.
+- `Done`, `Now`, and `Next` are explicit and current.
+- The ledger is a bridge to the real source artifacts, not a shadow PRD.
 
-## Defaults
-
-- Use bullets, not prose.
-- Keep only stable facts and actionable status.
-- Reference files, commands, and decisions when they matter.
-- Reference current bundle artifacts when they exist instead of restating them.
-- Do not paste chat transcript into the ledger.
-
-## Anti-Frankenstein rules
-
-- No extra database, vector store, or sidecar memory service.
-- No duplicate "memory" file if an issue or brief already serves that role.
-- The ledger is a bridge, not a second PRD.
-
-## When to read the reference
-
-For a minimal template and update rules, read `references/template.md`.
+## Output
+- An updated `CONTINUITY.md` path.
+- A short summary of changed sections, especially decisions and `Done`/`Now`/`Next`.
+- Any unresolved question that still blocks confident continuation.
