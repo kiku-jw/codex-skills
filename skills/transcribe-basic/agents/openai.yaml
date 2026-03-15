@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transcribe Basic"
+  short_description: "Create a fast plain-text transcript from audio"
+  default_prompt: "Use $transcribe-basic to create a fast plain-text transcript from this audio file."
