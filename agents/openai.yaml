@@ -1,4 +1,4 @@
 interface:
   display_name: "Idea Validation"
-  short_description: "Turn a raw idea into a lean validation brief and honest next lane"
+  short_description: "Turn raw ideas into lean validation briefs"
   default_prompt: "Validate this product idea before PRD or implementation, produce a compact validation brief, and route it honestly into more validation, product shaping, or architecture-aware execution."
