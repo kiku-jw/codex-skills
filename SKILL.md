@@ -1,53 +1,31 @@
 ---
 name: public-artifact-lane
-description: Turn real work into public-ready artifacts like build diaries, release notes, launch posts, case studies, or demo scripts. Trigger on requests like public artifact, write a launch post, make release notes, turn this work into a post, write a build diary, or prepare a public-facing summary of work.
+description: Turn real work into public-ready artifacts such as build diaries, release notes, launch posts, case studies, or demo scripts. Use when the goal is a public or shareable artifact grounded in completed work.
 ---
 
 # Public Artifact Lane
 
-Use this skill when the work is real and the goal is a public or shareable artifact, not more code.
+## Metadata
+- Trigger when: the work is real and the user wants a public or shareable artifact rather than more code.
+- Do not use when: the work is not real yet, the artifact would leak private context, or the user only wants a private note.
 
-Typical prompts:
+## Skill Purpose
 
-- `write a build diary from this work`
-- `make release notes`
-- `turn this into a public post`
-- `prepare a launch writeup`
-- `make a case study draft`
+Convert real work and evidence into a public-facing artifact that is concrete, trustworthy, and safe to share.
 
-## Core Principle
+## Instructions
+1. Collect the real evidence first: diffs, issue notes, decisions, screenshots, metrics, or demo results. Then choose the artifact type. Read `/Users/nick/.codex/skills/public-artifact-lane/references/artifact-types.md` for artifact selection and `/Users/nick/.codex/skills/public-artifact-lane/references/storage.md` for default save locations only when needed.
+2. Draft the artifact from evidence outward. Keep the first screen useful, label goals as goals, and remove private implementation chatter or backstage jargon. If the text feels synthetic afterward, route through `$ai-writing-detox`; if visuals would help, route through `$visual-explainer` or `$illustration-prompt`.
+3. Validate the draft for privacy, truthfulness, and clarity before delivery. If the work is not public-safe, say so and stop instead of forcing a shareable version.
 
-Evidence before narrative.
+## Non-Negotiable Acceptance Criteria
+- Evidence beats narrative polish.
+- Do not invent results, usage, or metrics.
+- Private or sensitive details are removed or the artifact is withheld.
+- The artifact type matches the underlying work instead of padding a small change into a fake “launch.”
 
-Default workflow:
-
-`collect artifacts -> pick artifact type -> outline -> draft -> detox -> finalize`
-
-## What to do
-
-1. Collect inputs.
-   - diffs, issue notes, decisions, metrics, screenshots, or demo results
-2. Choose the artifact type.
-   - Read `references/artifact-types.md`.
-   - Read `references/storage.md` for default save locations.
-3. Draft the outline first.
-   - keep it short and concrete
-4. Write the draft in plain English.
-5. Run a detox pass if the text feels generic.
-   - use [$ai-writing-detox](/Users/nick/.codex/skills/ai-writing-detox/SKILL.md)
-6. If visuals help, suggest:
-   - [$visual-explainer](/Users/nick/.codex/skills/visual-explainer/SKILL.md)
-   - [$illustration-prompt](/Users/nick/.codex/skills/illustration-prompt/SKILL.md)
-
-## Output rules
-
-- Keep the first screen useful.
-- Do not invent results or metrics.
-- If something is a goal, label it as a goal.
-- Remove private or sensitive details.
-
-## When not to use
-
-- the work is not real yet
-- the artifact would leak internal context or private data
-- the user only wants a private note
+## Output
+- A public-ready draft or saved artifact path.
+- The chosen artifact type.
+- Any follow-up lane needed before publishing, such as detox, visual support, or legal/privacy review.
+- `Next skill options` (only if needed): `$ai-writing-detox` — remove generic AI tone before publishing; `$visual-explainer` — produce a supporting HTML explainer; `$illustration-prompt` — create image direction for the artifact; `$session-to-post` — turn the same work into a session-style diary draft instead of a public artifact.
