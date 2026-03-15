@@ -1,0 +1,6 @@
+interface:
+  display_name: "Long Context Dispatch"
+  short_description: "Delegate oversized analysis to a read-only long-context worker"
+  default_prompt: "Use $long-context-dispatch to confirm, launch, and wait on a read-only long-context worker for this oversized analysis task."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Parallel Worktrees"
+  short_description: "Use isolated git worktrees for substantial multi-lane execution"
+  default_prompt: "Split this substantial task into safe isolated git worktrees with one owner concern per lane."
