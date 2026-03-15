@@ -1,61 +1,31 @@
 ---
 name: product-shaping
-description: "Shape product work with the minimum useful framework after an idea clears basic validation: assumptions, experiments, opportunity-solution tree, strategy, value proposition, or pre-mortem, then route it into the right execution lane without drifting into PM theater."
+description: Shape product work with the minimum useful framework after an idea clears basic validation. Use for assumptions, experiments, opportunity-solution trees, strategy, value proposition, or pre-mortems when the next product decision is still fuzzy.
 ---
 
 # Product Shaping
 
-Use this skill when the work is worth considering, but the next product decision is still fuzzy.
+## Metadata
+- Trigger when: validation exists, but the next product decision still needs structure before implementation or spec work.
+- Do not use when: the work still needs basic validation or already has a clear implementation-ready direction.
 
-Typical prompts:
+## Skill Purpose
 
-- `shape the product side`
-- `which framework fits here`
-- `map the risky assumptions`
-- `help me narrow the strategy`
-- `run a pre-mortem`
+Choose one compact product-thinking frame that reduces ambiguity without drifting into PM theater or bloated process.
 
-## Before you start
+## Instructions
+1. Gate the lane first. If the real question is still `build or not`, route back to `$idea-validation`. If the spec is already clear and the next blocker is implementation, route to `$spec-bundle` or execution instead.
+2. Choose the smallest framework that fits the actual uncertainty: assumptions, experiment design, opportunity-solution tree, product strategy, value proposition, or pre-mortem. Use `~/.codex/skills/product-shaping/references/patterns.md` when you need the compact templates.
+3. Produce one decision-ready output tied to the current task and end with an explicit next lane: stay in product shaping, return to validation, move to a short execution brief, or move to the appropriate level of `$spec-bundle`. If another skill is needed, name it explicitly with a one-line reason.
 
-- If the real question is `build or not`, use `idea-validation` first.
-- If the user already has a clear spec and just needs execution, move to `spec-bundle` or coding work instead.
-- If architecture choices already dominate the risk, skip framework tourism and move to `spec-bundle` with the smallest honest architecture lane.
+## Non-Negotiable Acceptance Criteria
+- One framework by default; chain only when one output clearly feeds the next.
+- Trade-offs, risky assumptions, and the next concrete move are explicit.
+- No generic PM ceremony, roadmap theater, or silent handoff vagueness.
+- The output names the next lane instead of leaving routing implicit.
 
-## Choose the smallest framework that fits
-
-- `identify-assumptions` when the main risk is hidden assumptions.
-- `prioritize-assumptions` when there are too many assumptions to test at once.
-- `brainstorm-experiments` when the risky assumption is known and the next move is the fastest proof path.
-- `opportunity-solution-tree` when the outcome is clear but the solution space is messy.
-- `product-strategy` when positioning, defensibility, or strategic fit is fuzzy.
-- `value-proposition` when the user, pain, or promised outcome is still soft.
-- `pre-mortem` when execution is moving and the failure modes need to surface early.
-
-## Route the result
-
-- Stay in `product-shaping` only if another product question clearly blocks progress.
-- Move back to `idea-validation` if the work still lacks believable signal or buyer clarity.
-- Move to a short execution brief or core `spec-bundle` if the next move is straightforward, local, and reversible.
-- Move to `spec-bundle` with a `light architecture lane` if the shaped solution crosses subsystems, needs a system map, or depends on explicit invariants or local/cloud boundaries.
-- Move to `spec-bundle` with a `full architecture pack` if the chosen direction now implies schema work, public API/event contracts, background jobs, auth/permissions logic, external integrations, or meaningful rollout/cost risk.
-
-## Output rules
-
-1. Use one framework by default. Chain only when one output clearly feeds the next.
-2. Keep outputs compact, decision-ready, and tied to the current task.
-3. Prefer bullets over essays.
-4. Name tradeoffs, risky assumptions, and the next concrete move.
-5. End with an explicit next lane: `validation`, `product-shaping`, `execution brief`, `core spec-bundle`, `light architecture lane`, or `full architecture pack`.
-6. Do not auto-expand into PRD, roadmap, sprint, or release planning unless asked.
-
-## Anti-Frankenstein rules
-
-- No marketplace logic.
-- No slash-command assumptions.
-- No generic PM ceremony.
-- No duplication of the operator's existing build flow.
-- No handoff vagueness. Say which lane the work should enter next.
-
-## When to read the reference
-
-For framework selection, exact output shapes, and compact templates, read `references/patterns.md`.
+## Output
+- A compact framework result anchored to the current product question.
+- An explicit next lane.
+- The smallest next action or experiment that would reduce uncertainty fastest.
+- `Next skill options` (only if needed): `$idea-validation` — go back and validate buyer/pain/signal; `$spec-bundle` — convert the chosen direction into contracts, schema, and gates; `$product-council` — run a multi-lens check on a fuzzy or risky decision.
