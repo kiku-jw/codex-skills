@@ -1,4 +1,4 @@
 interface:
   display_name: "ADR Log"
-  short_description: "Capture significant architecture decisions with rationale and trade-offs"
+  short_description: "Capture architecture decisions and trade-offs"
   default_prompt: "Use $adr-log to decide whether this choice deserves an ADR, record the alternatives and trade-offs, and store the durable summary in the right place."
