@@ -1,69 +1,31 @@
 ---
 name: codex-execution-pack
-description: Build a Codex execution pack from raw input or PRD: AGENTS.md plus docs/PLAN.md, docs/STATUS.md, docs/TEST_PLAN.md, docs/BACKLOG.md, with optional prompt surfaces and spec companion files for durable, resumable execution.
+description: 'Build a Codex execution pack from a raw task or PRD: `AGENTS.md` plus `docs/PLAN.md`, `docs/STATUS.md`, `docs/TEST_PLAN.md`, and `docs/BACKLOG.md`, with optional prompt surfaces and a spec companion when the work is large enough to justify them.'
 ---
 
 # Codex Execution Pack
 
-Use this skill when the user wants a real operating pack for Codex rather than a loose spec or one-off prompt.
+## Metadata
+- Trigger when: the user wants a durable operating pack for Codex instead of a loose spec or one-off prompt.
+- Do not use when: the work is tiny, highly reversible, or better served by a short execution brief.
 
-Typical prompts:
+## Skill Purpose
 
-- `собери execution pack для Codex`
-- `сделай AGENTS.md + PLAN + STATUS + TEST_PLAN + BACKLOG`
-- `нужен resumable pack для большой задачи`
-- `преврати этот PRD в operating pack`
-- `сделай pack для milestone-by-milestone execution`
+Create a durable execution harness that survives long runs and resumptions by separating execution policy, plan, live status, validation, and backlog into explicit files.
 
-## What to do
+## Instructions
+1. Decide whether a full pack is honest. If the source is still fuzzy, route through `$idea-validation` or `$spec-bundle` first. If the pack is justified, scaffold it with `~/.codex/skills/codex-execution-pack/scripts/init_execution_pack.py`. Use `~/.codex/skills/codex-execution-pack/references/pack-shape.md` only when you need the exact file roles.
+2. Fill only the artifacts that materially improve execution quality: `AGENTS.md`, `docs/PLAN.md`, `docs/STATUS.md`, `docs/TEST_PLAN.md`, and `docs/BACKLOG.md`, plus optional prompt surfaces or `spec/` files when they reduce ambiguity. Keep one source of truth per concern.
+3. Validate the pack. Every milestone must have concrete validation commands, `docs/STATUS.md` must own live done/now/next state, and the pack must stay synchronized with any separate spec bundle instead of forking reality.
 
-1. Decide first if the full pack is honest.
-   - For tiny or reversible work, use a short execution brief instead.
-2. If the input is still fuzzy, shape the source first.
-   - If buyer, pain, or wedge are still unclear, route to `idea-validation`.
-   - If the product direction is clear but implementation risk is high, pair this skill with `spec-bundle`.
-3. Scaffold the pack:
+## Non-Negotiable Acceptance Criteria
+- Do not generate a full pack for tiny work.
+- Every meaningful milestone has explicit validation, repair-before-continue expectations, and a durable status surface.
+- Prompt surfaces and spec companion files exist only when they reduce ambiguity or recovery cost.
+- If issue or board sync fails, that fact is written into the pack instead of disappearing into chat.
 
-```bash
-python3 scripts/init_execution_pack.py --out /absolute/path/to/pack --project-name "Project Name"
-python3 scripts/init_execution_pack.py --out /absolute/path/to/pack --project-name "Project Name" --with-prompts
-python3 scripts/init_execution_pack.py --out /absolute/path/to/pack --project-name "Project Name" --with-prompts --with-spec-companion --with-architecture-pack --with-adrs
-```
-
-4. Fill the operating files with only the detail that changes execution quality:
-   - `AGENTS.md`
-   - `docs/PLAN.md`
-   - `docs/STATUS.md`
-   - `docs/TEST_PLAN.md`
-   - `docs/BACKLOG.md`
-5. Add prompt surfaces when the user wants reusable execution prompts:
-   - `prompts/execute.md`
-   - `prompts/resume.md`
-   - `prompts/review-repair.md`
-   - `prompts/blocker-compress.md`
-6. Add `spec/` only when contracts, schema, architecture boundaries, or hard gates matter.
-7. Keep pack state synchronized:
-   - `AGENTS.md` sets execution policy
-   - `docs/PLAN.md` owns dependency order and done criteria
-   - `docs/STATUS.md` owns live done/now/next, assumptions, blockers, and commands
-   - `docs/TEST_PLAN.md` owns validation and release gates
-   - `docs/BACKLOG.md` owns the GitHub-ready task slice
-   - `spec/` owns contracts and architecture details when present
-
-## When to read the reference
-
-If you need the exact file roles, when to include prompt surfaces, or how this pack should sit next to a spec bundle, read:
-
-- `references/pack-shape.md`
-
-## Rules
-
-- Do not generate the full pack for tiny work.
-- Keep one source of truth per concern.
-- Prefer scoped milestones that can close in one implementation loop.
-- Every milestone must have concrete validation commands.
-- Use repair-before-continue as the default execution rule.
-- Record local assumptions in `docs/STATUS.md`, not in chat.
-- If issue or board sync fails, log it in `docs/STATUS.md` and continue.
-- Use blocker compression only for real blockers after repair attempts, not for ordinary uncertainty.
-- If a separate spec bundle exists, do not fork reality. Update the pack and the spec together when requirements move.
+## Output
+- The created or updated pack files on disk.
+- A short summary of what starts first, which validation gates matter most, and what would stop execution.
+- Any missing input or blocker that prevents the pack from being truly executable.
+- `Next skill options` (only if needed): `$spec-bundle` — add deeper contracts or architecture artifacts; `$justdoit` — drive execution from the generated pack; `$continuity-ledger` — preserve durable state across long execution runs.
