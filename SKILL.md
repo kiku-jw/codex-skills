@@ -1,73 +1,30 @@
 ---
 name: visual-explainer
-description: Create self-contained HTML explainers for systems, workflows, diagrams, architecture, comparisons, timelines, or data-heavy summaries when plain terminal text would be painful to read. Trigger on requests like diagram this, visualize this, show me the architecture, make a table I can read, render this as HTML, explain this system visually, or when the output naturally wants a structured visual artifact instead of chat prose.
+description: Create a self-contained HTML explainer for systems, workflows, diagrams, timelines, comparisons, or data-heavy summaries when plain terminal text would be painful to read. Use when the output naturally wants a visual artifact instead of chat prose.
 ---
 
 # Visual Explainer
 
-Use this skill when the best output is a browser-readable artifact, not a wall of text.
+## Metadata
+- Trigger when: the best output is a browser-readable HTML artifact rather than a wall of text.
+- Do not use when: a short plain-text answer would already communicate the structure clearly.
 
-Typical prompts:
+## Skill Purpose
 
-- `visualize this`
-- `make a diagram for this system`
-- `render this table as HTML`
-- `show me the architecture visually`
-- `turn this into a readable explainer`
+Show structure visually through a single portable HTML artifact so complex systems, tables, and flows become readable at a glance instead of buried in chat.
 
-## Core Principle
+## Instructions
+1. Choose the right visualization type first. Use `/Users/nick/.codex/skills/visual-explainer/references/routing.md` if you need help selecting between architecture, timeline, comparison, table, or other visual forms.
+2. Build one self-contained HTML artifact with one clear visual direction. Reuse templates from `/Users/nick/.codex/skills/visual-explainer/assets/templates` when they help, and validate against `/Users/nick/.codex/skills/visual-explainer/references/style-rules.md` and `/Users/nick/.codex/skills/visual-explainer/references/quality-checks.md` before delivery.
+3. Save the file to a sensible workspace path, open or inspect it when possible, and return the path plus a short note about what the artifact shows.
 
-If the structure matters, show the structure.
-
-Default workflow:
-
-`pick visualization type -> choose one clear aesthetic -> generate self-contained HTML -> validate readability -> share file path`
-
-## When to use
-
-- architecture overviews
-- flowcharts and pipelines
-- side-by-side comparisons
-- timelines
-- dashboards or metric summaries
-- data tables too large for comfortable chat output
-- diff or system explainers where spatial grouping matters
-
-## What to do
-
-1. Pick the right format.
-   - Read `references/routing.md`.
-2. Choose one visual direction.
-   - Make it intentional, not generic.
-   - Read `references/style-rules.md`.
-3. Build a self-contained HTML artifact.
-   - Use one of the templates in `assets/templates/` when helpful.
-4. Save the file in a sensible workspace location.
-   - Prefer a descriptive filename.
-   - If no location is specified, use `./artifacts/visual-explainer/` or `/tmp/visual-explainer` as fallback.
-5. If browser tooling is available, open or inspect the result.
-6. Return the file path and a short note about what it shows.
-
-## Output rules
-
-- Prefer semantic HTML over div soup when tables or lists are involved.
+## Non-Negotiable Acceptance Criteria
+- Prefer semantic HTML and a useful first screen over generic dashboard sludge.
+- The output is one self-contained `.html` file unless the user explicitly asked for a multi-file artifact.
 - Use Mermaid only when automatic layout helps more than it hurts.
-- Keep the first screen informative.
-- Avoid generic dark-dashboard slop.
-- If the user asked for a table with many rows or columns, render HTML instead of pasting a wide ASCII table.
+- If the user asked for a wide table or large structured comparison, render it in HTML instead of pasting a painful terminal table.
 
-## File rules
-
-- Output should be one self-contained `.html` file unless the user asks otherwise.
-- Inline CSS and small JS are preferred for portability.
-- Use CDN assets only when they materially help, such as Mermaid or Chart.js.
-- If possible, open the file:
-  - macOS: `open <file>`
-  - Linux: `xdg-open <file>`
-  - Windows: `start <file>`
-
-## References
-
-- Read `references/routing.md` to choose the visualization type.
-- Read `references/style-rules.md` for typography, color, spacing, and accessibility guardrails.
-- Read `references/quality-checks.md` before delivery.
+## Output
+- The HTML file path.
+- A short description of what the explainer shows and how it is organized.
+- Any note about template reuse, browser inspection, or unresolved visual caveats.
