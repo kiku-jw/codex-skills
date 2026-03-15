@@ -1,47 +1,31 @@
 ---
 name: work-shaping
-description: "Use before coding when the main question is how much process the work deserves: tiny vs substantial, chat vs GitHub, checklist vs execution brief, architecture lane vs full architecture pack, operator review vs council, private diary vs public draft."
+description: 'Decide how much process a task deserves before coding: tiny vs substantial, chat vs GitHub, checklist vs execution brief, architecture lane vs full bundle, operator review vs council, and private diary vs public draft. Use when the shape of the work is the blocker.'
 ---
 
 # Work Shaping
 
-Use this skill when the user is not blocked by code yet, but by the shape of the work.
+## Metadata
+- Trigger when: the user is not blocked by code yet, but by uncertainty about how much process, tracking, or review the work deserves.
+- Do not use when: the next step is already clearly implementation and no shaping decision remains.
 
-Typical prompts:
+## Skill Purpose
 
-- `это большая задача или мелочь`
-- `нужно ли заводить issue`
-- `стоит ли это тащить в блог`
-- `тут нужен консилиум или можно просто делать`
-- `сколько процесса вообще нужно`
+Choose the smallest honest operating lane for a task so small work stays light and meaningful work gets durable structure before it disappears into chat.
 
-## What to do
+## Instructions
+1. Classify the work across the main axes: size, durable surface, planning depth, architecture lane, review lane, and artifact/public-writing lane.
+2. Choose the smallest honest process that matches those axes. If architecture is not `none`, route toward `$spec-bundle`; if durable tracking is needed, route toward GitHub or another explicit source of truth; if the user already implied action, do not stop at classification.
+3. Return a compact shaping verdict that names the recommended next lane immediately instead of leaving the process choice implied. If another skill is needed, list only the valid next skill options in the form `$skill-name` — one-line purpose.
 
-1. Classify the work on six axes:
-   - `tiny` or `substantial`
-   - `chat`, `local note`, or `GitHub issue`
-   - `none`, `lightweight checklist`, or `execution brief`
-   - `none`, `light architecture lane`, or `full architecture pack`
-   - `none`, `operator review`, or `council`
-   - `none`, `private diary`, or `public draft`
-2. Prefer the smallest honest process.
-3. If the architecture lane is not `none`, route the work into `spec-bundle` and keep architecture in durable artifacts, not in chat.
-4. If the user already implied action, do not stop at classification. Move to the next step.
+## Non-Negotiable Acceptance Criteria
+- No ceremony for tiny reversible work.
+- Substantial work does not vanish into chat without a durable surface.
+- Architecture risk is made explicit instead of buried inside vague planning language.
+- The answer distinguishes what is already real from what is only the recommended next step.
 
-## Heuristics
-
-- `substantial` if the work spans sessions, touches multiple files/systems/repos, changes user-facing behavior, or carries rollout/security risk.
-- `GitHub issue` if the work needs handoff, review, or durable tracking.
-- `execution brief` if ambiguity would slow coding down more than writing the brief.
-- `light architecture lane` if the work crosses more than one subsystem, has a meaningful local/cloud boundary, or needs a small system map before coding.
-- `full architecture pack` if the work includes schema changes, public API or event contracts, background jobs, auth/permissions changes, external integrations, or meaningful rollout/cost risk.
-- `council` only if there is a real tradeoff, hidden risk, or high-impact choice.
-- `public draft` only if there is a public-safe artifact or lesson. Do not build public writing on private kitchen.
-
-## Rules
-
-- Do not add ceremony for tiny reversible work.
-- Do not let meaningful work disappear into chat.
-- Make the architecture lane explicit for risky work instead of burying it in a vague PRD.
-- Use hard gates only for irreversible or expensive choices. Use soft gates everywhere else.
-- Be explicit about what is already real versus what is only a good next step.
+## Output
+- A compact shaping verdict across the main axes.
+- The recommended next lane or skill.
+- The one or two main reasons that process level is justified.
+- `Next skill options` (only if needed): `$idea-validation` — validate buyer/pain/wedge truth; `$spec-bundle` — create implementation-ready contracts and gates; `$justdoit` — create plan/status/test-plan for execution; `$product-council` — pressure-test a fuzzy high-impact choice.
