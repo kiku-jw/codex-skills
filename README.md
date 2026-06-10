@@ -5,6 +5,7 @@ Canonical source repo for generic and system Codex skills that do not yet live i
 ## Included Skills
 
 - `adversarial-review`
+- `browser-tutorial-video`
 - `github-mobile-ops`
 - `justdoit`
 - `long-context-dispatch`

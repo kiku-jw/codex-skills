@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Tutorial Video"
+  short_description: "Record polished browser walkthrough videos"
+  default_prompt: "Use $browser-tutorial-video to record a polished browser walkthrough with cursor highlights, click audio, and ffmpeg verification."
