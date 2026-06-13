@@ -1,0 +1,4 @@
+interface:
+  display_name: "Autonomous Video Pipeline"
+  short_description: "Build and verify short explainer videos"
+  default_prompt: "Use $autonomous-video-pipeline to produce a verified short explainer video package from source material."
