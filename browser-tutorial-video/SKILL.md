@@ -23,6 +23,10 @@ For final-render QA, read [references/qa-pattern.md](references/qa-pattern.md)
 and use `scripts/tutorial_video_qa.js` when the video has a click timeline or
 long-scroll/PDF checkpoints.
 
+For repeatable jobs, read [references/job-spec.md](references/job-spec.md), use
+`templates/tutorial-job.json` as the input contract, and start simple jobs with
+`scripts/scaffold_tutorial_job.js` plus `scripts/run_tutorial_job.js`.
+
 For optional external helpers, read
 [references/external-tool-watchlist.md](references/external-tool-watchlist.md)
 only when deciding whether to add Remotion, Stagehand, pixelmatch, rrweb, or a
@@ -35,6 +39,8 @@ recording wrapper to a specific project.
      overlays, click sound, zoom, resolution, FPS, and output file names.
    - Confirm the workflow is public, user-owned, demo-account based, or
      otherwise explicitly authorized.
+   - For repeatable work, create a tutorial job spec instead of relying on chat
+     memory.
    - If the user provides enough detail, act directly. Ask only when missing
      information changes the artifact.
 
@@ -47,6 +53,10 @@ recording wrapper to a specific project.
    - For localized pages, put labels and URLs in a config map.
 
 3. Build or adapt a repo-local recorder.
+   - For simple selector/text/scroll jobs, try `scripts/run_tutorial_job.js`
+     first.
+   - For complex sites, PDFs, localization, downloads, or fragile flows, adapt a
+     repo-local recorder using the Playwright + ffmpeg pattern.
    - Use a high-resolution viewport such as `2560x1440` and render at `60 fps`
      when the user asks for quality.
    - Hide or pre-accept cookie banners before recording unless requested.

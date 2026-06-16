@@ -161,6 +161,8 @@ function extractFrame(video, outFile, seconds) {
     video,
     "-frames:v",
     "1",
+    "-pix_fmt",
+    "yuvj420p",
     "-q:v",
     "2",
     outFile,
@@ -177,6 +179,8 @@ function extractIntervalFrames(video, framesDir, everySeconds) {
     video,
     "-vf",
     `fps=1/${everySeconds}`,
+    "-pix_fmt",
+    "yuvj420p",
     "-q:v",
     "2",
     pattern,
@@ -212,6 +216,8 @@ function makeContactSheet(framesDir, outFile, tileCols) {
     `scale=360:-1,tile=${tileCols}x${rows}:padding=8:margin=8`,
     "-frames:v",
     "1",
+    "-pix_fmt",
+    "yuvj420p",
     outFile,
   ]);
   return outFile;
