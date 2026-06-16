@@ -19,6 +19,15 @@ For implementation details and snippets, read
 [references/playwright-ffmpeg-pattern.md](references/playwright-ffmpeg-pattern.md)
 when building or modifying a recorder.
 
+For final-render QA, read [references/qa-pattern.md](references/qa-pattern.md)
+and use `scripts/tutorial_video_qa.js` when the video has a click timeline or
+long-scroll/PDF checkpoints.
+
+For optional external helpers, read
+[references/external-tool-watchlist.md](references/external-tool-watchlist.md)
+only when deciding whether to add Remotion, Stagehand, pixelmatch, rrweb, or a
+recording wrapper to a specific project.
+
 ## Workflow
 
 1. Pin the requested flow.
@@ -66,6 +75,9 @@ when building or modifying a recorder.
    - Run syntax checks on the recorder.
    - Inspect the MP4 with `ffprobe`: width, height, video FPS, audio codec,
      sample rate, duration, and size.
+   - If a click timeline exists, run `scripts/tutorial_video_qa.js` to extract
+     pre-click, post-click, interval, and long-scroll checkpoint frames plus a
+     contact sheet.
    - Check the click timeline JSON includes the expected click sound and click
      count.
    - Extract control frames around each click: one before the click to confirm
@@ -87,11 +99,16 @@ when building or modifying a recorder.
   exists.
 - Keep outputs separate by locale or variant so rerenders do not overwrite
   completed videos.
+- Keep Remotion, Stagehand, rrweb, and other helpers optional. The final
+  recording path should stay deterministic Playwright plus ffmpeg unless a
+  project-specific need justifies extra moving parts.
 
 ## Output
 
 - MP4 video artifact paths.
 - Verification summary: syntax check, `ffprobe` metadata, click count, and QA
   frame checks.
+- Contact sheet and QA summary paths when `scripts/tutorial_video_qa.js` was
+  used.
 - Any residual limitation, such as target-site layout drift, PDF viewer
   behavior, or authorization boundaries.
