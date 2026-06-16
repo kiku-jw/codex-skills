@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lazy Senior"
+  short_description: "Minimal code with prior-art checks"
+  default_prompt: "Use $lazy-senior to make a short decision receipt before adding code."
