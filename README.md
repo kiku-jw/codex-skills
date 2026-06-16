@@ -9,6 +9,7 @@ Canonical source repo for generic and system Codex skills that do not yet live i
 - `browser-tutorial-video`
 - `github-mobile-ops`
 - `justdoit`
+- `lazy-senior`
 - `long-context-dispatch`
 - `openclaw-council`
 - `parallel-worktrees`
