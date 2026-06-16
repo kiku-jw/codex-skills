@@ -1,0 +1,29 @@
+{
+  "title": "Example browser tutorial",
+  "startUrl": "https://example.com/",
+  "outputDir": "./out/example-browser-tutorial",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "fps": 15,
+  "zoom": 1,
+  "headless": true,
+  "actions": [
+    {
+      "type": "wait",
+      "ms": 600
+    },
+    {
+      "type": "scroll",
+      "y": 500,
+      "durationMs": 900
+    }
+  ],
+  "qa": {
+    "every": 1,
+    "checkpoints": [
+      0
+    ]
+  }
+}
