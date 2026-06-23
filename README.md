@@ -19,3 +19,7 @@ Canonical source repo for generic and system Codex skills that do not yet live i
 - `.system/skill-installer`
 
 Each directory is a standalone skill folder with its own `SKILL.md`, metadata, and supporting references or scripts when needed.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
