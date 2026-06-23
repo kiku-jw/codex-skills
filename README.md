@@ -68,3 +68,7 @@ The missing pieces are usually boring but decisive:
 - epic breakdown
 
 That is what this kit is trying to make easier.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
