@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> This repository has been superseded by
+> [`kiku-jw/spec-bundle-skill`](https://github.com/kiku-jw/spec-bundle-skill),
+> which contains the maintained scaffolder and the fuller architecture/gate
+> bundle. This repository remains available for historical compatibility.
+
 # Agent Spec Bundle
 
 `Agent Spec Bundle` is a small public kit for turning a loose PRD into something an engineering agent can actually build from.
