@@ -65,7 +65,7 @@
   {
     "name": "Product Council",
     "slug": "product-council",
-    "repo": "https://github.com/kiku-jw/product-council",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-council",
     "tagline": "Stress-test a product decision with explicit multi-lens councils.",
     "focus": "High-impact product decisions with competing lenses",
     "best_used_when": [
@@ -80,7 +80,7 @@
     ],
     "origin_type": "original",
     "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/product-council",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-council",
     "origin_note": "Original public skill by Kiku."
   },
   {
@@ -170,7 +170,7 @@
   {
     "name": "Triage Finding",
     "slug": "triage-finding",
-    "repo": "https://github.com/kiku-jw/triage-finding",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/triage-finding",
     "tagline": "Fact-check an external finding, detect duplicates, and give one honest verdict.",
     "focus": "Fact-checking usefulness triage for links, repos, posts, videos, and saved findings",
     "best_used_when": [
@@ -193,7 +193,7 @@
   {
     "name": "Tool Scout",
     "slug": "tool-scout",
-    "repo": "https://github.com/kiku-jw/tool-scout",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/tool-scout",
     "tagline": "Search current tools across multiple sources and recommend the best-fit option.",
     "focus": "Multi-source build-vs-buy and ecosystem option research",
     "best_used_when": [
@@ -239,7 +239,7 @@
   {
     "name": "ADR Log",
     "slug": "adr-log",
-    "repo": "https://github.com/kiku-jw/adr-log",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/adr-log",
     "tagline": "Record architecture decisions and trade-offs before reasoning disappears.",
     "focus": "Durable architecture and execution decision capture",
     "best_used_when": [
@@ -366,7 +366,7 @@
   {
     "name": "AI Writing Detox",
     "slug": "ai-writing-detox",
-    "repo": "https://github.com/kiku-jw/ai-writing-detox",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/ai-writing-detox",
     "tagline": "Remove obvious AI-writing tics without flattening the real voice.",
     "focus": "Cleanup pass for public-facing drafts",
     "best_used_when": [
@@ -387,7 +387,7 @@
   {
     "name": "Public Artifact Lane",
     "slug": "public-artifact-lane",
-    "repo": "https://github.com/kiku-jw/public-artifact-lane",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane",
     "tagline": "Turn real work into public-ready artifacts with evidence-first framing.",
     "focus": "Public-facing artifacts from real work",
     "best_used_when": [
@@ -402,13 +402,13 @@
     ],
     "origin_type": "original",
     "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/public-artifact-lane",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane",
     "origin_note": "Original public skill by Kiku."
   },
   {
     "name": "Illustration Prompt",
     "slug": "illustration-prompt",
-    "repo": "https://github.com/kiku-jw/illustration-prompt",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/illustration-prompt",
     "tagline": "Turn vague image ideas and refs into precise generator-ready prompts.",
     "focus": "Visual direction and prompt structuring for image generation",
     "best_used_when": [
@@ -429,7 +429,7 @@
   {
     "name": "README Generator",
     "slug": "readme-generator",
-    "repo": "https://github.com/kiku-jw/readme-generator-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/readme-generator",
     "tagline": "Create or rewrite a human-first README without doc bloat.",
     "focus": "README quality and public repo framing",
     "best_used_when": [
@@ -444,7 +444,7 @@
     ],
     "origin_type": "original",
     "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/readme-generator-skill",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/readme-generator",
     "origin_note": "Original public skill by Kiku."
   },
   {

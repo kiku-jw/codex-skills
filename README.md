@@ -60,25 +60,25 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Work Shaping | Process calibration before coding | You need to decide how much process, tracking, architecture, or review the task deserves | [work-shaping-skill](https://github.com/kiku-jw/work-shaping-skill) | Original by Kiku |
 | Idea Validation | Turning ideas into honest validation briefs | The idea is still fuzzy and should not jump straight into a PRD or build | [idea-validation-skill](https://github.com/kiku-jw/idea-validation-skill) | Original by Kiku |
 | Product Shaping | Choosing the smallest useful product framework | The idea has some signal, but the next product decision is still unclear | [product-shaping-skill](https://github.com/kiku-jw/product-shaping-skill) | Original by Kiku |
-| Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/product-council) | Original by Kiku |
+| Product Council | Stress-testing high-impact product decisions | The main risk is in blind spots, conflicting lenses, or a fuzzy go/no-go call | [product-council](https://github.com/kiku-jw/codex-skills/tree/main/product-council) | Original by Kiku |
 | Spec Bundle | Converting a loose spec into an implementation-ready bundle | A PRD is no longer enough and execution needs contracts, schema, tests, or architecture artifacts | [spec-bundle-skill](https://github.com/kiku-jw/spec-bundle-skill) | Inspired by [Sereja Ris](https://sereja.tech/) |
 | JustDoIt | Durable execution planning for non-trivial repo work | A task needs sequence-first, issue-first plan, status, and test-plan files before execution and another Codex run should be able to resume cleanly | [codex-skills/justdoit](https://github.com/kiku-jw/codex-skills/tree/main/justdoit) | Adapted from [serejaris/justdoit](https://github.com/serejaris/justdoit) |
 | Execution Pack | Turning a PRD into a durable Codex operating pack | Codex needs AGENTS.md, plan, status, tests, backlog, and reusable execution prompts for multi-session work | [codex-execution-pack](https://github.com/kiku-jw/codex-execution-pack) | Original by Kiku |
 | AGX Orchestrator | Optional bounded outside lane for Codex-first work | Codex should keep planning and final judgment, and a narrow helper or skeptical review slice may go through AGX with explicit paths and verification | [agx-core/agx-orchestrator](https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
-| Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
-| Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
+| Triage Finding | Fact-checking and usefulness triage for outside finds | You found a post, repo, article, screenshot, video, or saved note and need to know whether it matters now or is already covered locally | [triage-finding](https://github.com/kiku-jw/codex-skills/tree/main/triage-finding) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding) |
+| Tool Scout | Multi-source research for build-vs-buy decisions | You want current options before building or buying the wrong thing and need GitHub, MCP, awesome-list, and web signals instead of one-source vibes | [tool-scout](https://github.com/kiku-jw/codex-skills/tree/main/tool-scout) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout) |
 | Lazy Senior | Anti-overengineering code planning, review, and audit | Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper | [codex-skills/lazy-senior](https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior) | Inspired by [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) |
-| ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
+| ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/codex-skills/tree/main/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs issue-first execution order, deterministic scaffolds, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
 | Codex Autonomous Delivery | Codex-first execution lane with issue-first flow | One main Codex lane should take work from PRD or request through issue, plan, execution, verification, and optional AGX review | [superpowers/codex-autonomous-delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery) | Original by Kiku |
 | GitHub Mobile Ops | Phone-first GitHub operator workflow | You want Issues, Projects, and GitHub Mobile to act as a real control surface from the phone | [codex-skills/github-mobile-ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops) | Original by Kiku |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/continuity-ledger-skill) | Original by Kiku |
 | Adversarial Review | Skeptical second-pass review for risky diffs | A meaningful diff needs a findings-first pass focused on bugs, regressions, security, and missing tests | [codex-skills/adversarial-review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review) | Original by Kiku |
 | Visual Explainer | Turning complex structure into readable HTML artifacts | A diagram, system map, timeline, or wide table is clearer in a browser than in chat | [visual-explainer](https://github.com/kiku-jw/visual-explainer) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/visual-explainer) via [nicobailon/visual-explainer](https://github.com/nicobailon/visual-explainer) |
-| AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/ai-writing-detox) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox) |
-| Public Artifact Lane | Turning real work into public-ready artifacts | You need a build diary, release notes, launch post, or case study from real work | [public-artifact-lane](https://github.com/kiku-jw/public-artifact-lane) | Original by Kiku |
-| Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/illustration-prompt) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/illustration-prompt) |
-| README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/readme-generator-skill) | Original by Kiku |
+| AI Writing Detox | Removing obvious AI-writing tics | A post, README, or public note needs to sound more human and more trustworthy | [ai-writing-detox](https://github.com/kiku-jw/codex-skills/tree/main/ai-writing-detox) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox) |
+| Public Artifact Lane | Turning real work into public-ready artifacts | You need a build diary, release notes, launch post, or case study from real work | [public-artifact-lane](https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane) | Original by Kiku |
+| Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/codex-skills/tree/main/illustration-prompt) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/illustration-prompt) |
+| README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/codex-skills/tree/main/readme-generator) | Original by Kiku |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/session-to-post) | Inspired by [serejaris/blog-pipeline-template](https://github.com/serejaris/blog-pipeline-template) |
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/video-builder-skill) | Original by Kiku |
 | Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
@@ -148,7 +148,7 @@ Typical prompts:
 - `Which framework fits this decision best?`
 - `Map the risky assumptions and tell me the next lane.`
 
-### [Product Council](https://github.com/kiku-jw/product-council)
+### [Product Council](https://github.com/kiku-jw/codex-skills/tree/main/product-council)
 
 Stress-test a product decision with explicit lenses instead of fake personality roleplay.
 
@@ -257,7 +257,7 @@ Typical prompts:
 - `Keep planning here, but dispatch the implementation slice through agx-core.`
 - `Turn this bounded change into an agx-core packet with verification.`
 
-### [Triage Finding](https://github.com/kiku-jw/triage-finding)
+### [Triage Finding](https://github.com/kiku-jw/codex-skills/tree/main/triage-finding)
 
 Turn an external finding into one honest verdict and one useful next step.
 
@@ -281,7 +281,7 @@ Typical prompts:
 - `Is this useful for us?`
 - `Review this ideas folder.`
 
-### [Tool Scout](https://github.com/kiku-jw/tool-scout)
+### [Tool Scout](https://github.com/kiku-jw/codex-skills/tree/main/tool-scout)
 
 Research the current tool landscape before building or buying the wrong thing.
 
@@ -330,7 +330,7 @@ Typical prompts:
 - `Is there already a GitHub solution or architecture we should borrow?`
 - `What is the smallest correct version of this feature?`
 
-### [ADR Log](https://github.com/kiku-jw/adr-log)
+### [ADR Log](https://github.com/kiku-jw/codex-skills/tree/main/adr-log)
 
 Capture architecture decisions and their trade-offs before the reasoning disappears.
 
@@ -471,7 +471,7 @@ Typical prompts:
 - `Make a diagram for this system.`
 - `Render this table as HTML.`
 
-### [AI Writing Detox](https://github.com/kiku-jw/ai-writing-detox)
+### [AI Writing Detox](https://github.com/kiku-jw/codex-skills/tree/main/ai-writing-detox)
 
 Remove obvious AI-writing tics from drafts without flattening the real voice.
 
@@ -491,7 +491,7 @@ Typical prompts:
 - `Detox this draft.`
 - `Clean up this README copy.`
 
-### [Public Artifact Lane](https://github.com/kiku-jw/public-artifact-lane)
+### [Public Artifact Lane](https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane)
 
 Turn real work into a public-ready artifact with evidence-first framing.
 
@@ -511,7 +511,7 @@ Typical prompts:
 - `Make release notes.`
 - `Prepare a launch writeup.`
 
-### [Illustration Prompt](https://github.com/kiku-jw/illustration-prompt)
+### [Illustration Prompt](https://github.com/kiku-jw/codex-skills/tree/main/illustration-prompt)
 
 Turn vague image requests and reference sets into precise generator-ready prompts.
 
@@ -531,7 +531,7 @@ Typical prompts:
 - `Help me make an image prompt from these refs.`
 - `Turn this vague idea into a Midjourney prompt.`
 
-### [README Generator](https://github.com/kiku-jw/readme-generator-skill)
+### [README Generator](https://github.com/kiku-jw/codex-skills/tree/main/readme-generator)
 
 Create or rewrite a repo README as a truthful public front page instead of an internal dump.
 
