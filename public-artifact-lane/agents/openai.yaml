@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Artifact Lane"
+  short_description: "Turn real work into evidence-first public artifacts"
+  default_prompt: "Use $public-artifact-lane to turn this work into a public-ready artifact, choose the right format, and draft a clear, evidence-first writeup."
