@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triage Finding"
+  short_description: "Fact-check findings and return a clear verdict"
+  default_prompt: "Use $triage-finding to inspect this external finding, verify its claims against the primary source, check whether we already have it locally, map it to current work, and give one honest verdict with the smallest useful next action."

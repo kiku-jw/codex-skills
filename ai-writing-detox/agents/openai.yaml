@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Writing Detox"
+  short_description: "Remove obvious AI-writing tics from public-facing drafts"
+  default_prompt: "Use $ai-writing-detox to keep the meaning of this draft but remove generic AI style, empty hype, throat-clearing, and artificial rhythm."
