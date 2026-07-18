@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transcribe Diarize"
+  short_description: "Create diarized transcripts with optional speaker hints"
+  default_prompt: "Use $transcribe-diarize to create a speaker-aware transcript with diarization for this audio file."
