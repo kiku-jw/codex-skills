@@ -1,0 +1,4 @@
+interface:
+  display_name: Issue Control Loop
+  short_description: Turn a GitHub issue into a durable human-agent control loop
+  default_prompt: Use $issue-control-loop to turn this task into a GitHub issue workflow with explicit machine state and handoff points.
