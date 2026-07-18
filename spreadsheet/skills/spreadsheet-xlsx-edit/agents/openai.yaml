@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spreadsheet XLSX Edit"
+  short_description: "Edit XLSX files without breaking formulas or formatting"
+  default_prompt: "Use $spreadsheet-xlsx-edit to make targeted changes to this XLSX workbook while preserving formulas, references, and formatting."
