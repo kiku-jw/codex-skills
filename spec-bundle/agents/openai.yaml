@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec Bundle"
+  short_description: "Build implementation-ready bundles with clear contracts"
+  default_prompt: "Turn this PRD or raw spec into an implementation-ready bundle with only the artifacts that reduce ambiguity, including blueprint, gates, and ADRs when warranted."
