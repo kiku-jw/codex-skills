@@ -1,14 +1,16 @@
 # Video Builder Skill
 
-Canonical source repo for the video-builder skill family.
+Canonical parent entry point for the video-builder skill family.
 
 ## Included Skills
 
 - Root skill: `video-builder`
-- Child skill: `skills/video-spec-builder`
-- Child skill: `skills/video-render-run`
+- Companion skill: [`video-spec-builder`](../video-spec-builder/)
+- Companion skill: [`video-render-run`](../video-render-run/)
 
-The root skill stays the front door. Child skills split planning from rendering so the harness stays narrow.
+The parent skill stays the front door. Companion skills split planning from
+rendering so the harness stays narrow. Install all three directories when using
+the companion entry points.
 
 ## License
 
