@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validation dependencies
+        run: python -m pip install pyyaml pytest
+      - name: Validate skill metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r skill; do
+            python .system/skill-creator/scripts/quick_validate.py "$skill"
+          done < <(find . -mindepth 2 -maxdepth 2 -name SKILL.md -print | sed 's#/SKILL.md##' | sort)
+          python .system/skill-creator/scripts/quick_validate.py .system/skill-creator
+          python .system/skill-creator/scripts/quick_validate.py .system/skill-installer
+      - name: Test session-to-post
+        run: PYTHONPATH=session-to-post/src python -m pytest -q session-to-post/tests
+      - name: Test issue-control-loop
+        run: PYTHONPATH=issue-control-loop/src python -m pytest -q issue-control-loop/tests
+      - name: Test codex-execution-pack
+        run: python -m pytest -q codex-execution-pack/tests

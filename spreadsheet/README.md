@@ -1,11 +1,16 @@
 # Spreadsheet Skill
 
-Canonical source repo for the spreadsheet skill family.
+Canonical parent entry point for the spreadsheet skill family.
 
 ## Included Skills
 
 - Root skill: `spreadsheet`
-- Child skill: `skills/spreadsheet-xlsx-edit`
-- Child skill: `skills/spreadsheet-tabular-analysis`
+- Companion skill: [`spreadsheet-xlsx-edit`](../spreadsheet-xlsx-edit/)
+- Companion skill: [`spreadsheet-tabular-analysis`](../spreadsheet-tabular-analysis/)
 
-The root skill acts as the parent router. Child skills keep the execution lanes atomic.
+The parent skill acts as the router. Companion skills keep the execution lanes
+atomic and use this directory's shared examples. Install the whole family.
+
+## License
+
+Apache-2.0. See [LICENSE.txt](LICENSE.txt).
