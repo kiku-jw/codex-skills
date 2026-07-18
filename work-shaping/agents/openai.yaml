@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Shaping"
+  short_description: "Choose the smallest honest amount of process"
+  default_prompt: "Decide how much process this task deserves before coding: tracking, brief level, architecture lane, review mode, and publication potential."
