@@ -2,7 +2,7 @@
   {
     "name": "Work Shaping",
     "slug": "work-shaping",
-    "repo": "https://github.com/kiku-jw/work-shaping-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/work-shaping",
     "tagline": "Choose the smallest honest amount of process before coding.",
     "focus": "Process calibration before coding",
     "best_used_when": [
@@ -23,7 +23,7 @@
   {
     "name": "Idea Validation",
     "slug": "idea-validation",
-    "repo": "https://github.com/kiku-jw/idea-validation-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/idea-validation",
     "tagline": "Turn a raw product idea into a lean validation brief.",
     "focus": "Idea validation before PRD or implementation",
     "best_used_when": [
@@ -44,7 +44,7 @@
   {
     "name": "Product Shaping",
     "slug": "product-shaping",
-    "repo": "https://github.com/kiku-jw/product-shaping-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-shaping",
     "tagline": "Use the smallest product framework that resolves the next decision.",
     "focus": "Product framing after basic validation",
     "best_used_when": [
@@ -86,7 +86,7 @@
   {
     "name": "Spec Bundle",
     "slug": "spec-bundle",
-    "repo": "https://github.com/kiku-jw/spec-bundle-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/spec-bundle",
     "tagline": "Build an implementation-ready bundle when a PRD is not enough.",
     "focus": "Execution-ready spec artifacts",
     "best_used_when": [
@@ -102,7 +102,7 @@
     "origin_type": "inspired",
     "origin_author": "Sereja Ris",
     "origin_repo": "https://github.com/serejaris/sereja.tech",
-    "origin_note": "Inspired by Sereja Ris's PRD-first and draft-before-artifact planning patterns documented in sereja.tech. Canonical public source is spec-bundle-skill; agent-spec-bundle remains a synced mirror."
+    "origin_note": "Inspired by Sereja Ris's PRD-first and draft-before-artifact planning patterns documented in sereja.tech. The canonical public source is codex-skills/spec-bundle; the former standalone repositories remain migration redirects."
   },
   {
     "name": "JustDoIt",
@@ -128,7 +128,7 @@
   {
     "name": "Execution Pack",
     "slug": "codex-execution-pack",
-    "repo": "https://github.com/kiku-jw/codex-execution-pack",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/codex-execution-pack",
     "tagline": "Build a durable Codex operating pack from a PRD or raw brief.",
     "focus": "Codex execution system with plan, status, tests, backlog, and prompts",
     "best_used_when": [
@@ -260,7 +260,7 @@
   {
     "name": "Issue Control Loop",
     "slug": "issue-control-loop",
-    "repo": "https://github.com/kiku-jw/issue-control-loop",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/issue-control-loop",
     "tagline": "Keep one GitHub Issue canonical and generate issue-first execution scaffolds.",
     "focus": "Canonical issue-driven workflow control with deterministic sequencing",
     "best_used_when": [
@@ -303,7 +303,7 @@
   {
     "name": "Continuity Ledger",
     "slug": "continuity-ledger",
-    "repo": "https://github.com/kiku-jw/continuity-ledger-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/continuity-ledger",
     "tagline": "Keep substantial work coherent with a factual CONTINUITY.md.",
     "focus": "Durable continuity across long-running work",
     "best_used_when": [
@@ -345,7 +345,7 @@
   {
     "name": "Visual Explainer",
     "slug": "visual-explainer",
-    "repo": "https://github.com/kiku-jw/visual-explainer",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/visual-explainer",
     "tagline": "Turn structure-heavy material into a clean self-contained HTML artifact.",
     "focus": "Browser-readable HTML explainers for systems, tables, and timelines",
     "best_used_when": [
@@ -450,7 +450,7 @@
   {
     "name": "Session to Post",
     "slug": "session-to-post",
-    "repo": "https://github.com/kiku-jw/session-to-post",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/session-to-post",
     "tagline": "Turn a finished coding session into a durable draft.",
     "focus": "End-of-session writing from real artifacts",
     "best_used_when": [
@@ -471,7 +471,7 @@
   {
     "name": "Video Builder",
     "slug": "video-builder",
-    "repo": "https://github.com/kiku-jw/video-builder-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/video-builder",
     "tagline": "Assemble narrated videos from scripts with ffmpeg and TTS.",
     "focus": "Narrated video assembly with ffmpeg and edge-tts",
     "best_used_when": [
@@ -580,7 +580,7 @@
   {
     "name": "Transcribe",
     "slug": "transcribe",
-    "repo": "https://github.com/kiku-jw/transcribe-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/transcribe",
     "tagline": "Route audio and video transcription into the smallest honest lane.",
     "focus": "Audio and video transcription with optional diarized speaker labels",
     "best_used_when": [
@@ -601,7 +601,7 @@
   {
     "name": "Spreadsheet",
     "slug": "spreadsheet",
-    "repo": "https://github.com/kiku-jw/spreadsheet-skill",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/spreadsheet",
     "tagline": "Route spreadsheet work into tabular analysis or workbook-safe editing.",
     "focus": "Spreadsheet analysis, reshaping, and `.xlsx` editing with validation",
     "best_used_when": [
