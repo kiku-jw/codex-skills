@@ -1,0 +1,622 @@
+[
+  {
+    "name": "Work Shaping",
+    "slug": "work-shaping",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/work-shaping",
+    "tagline": "Choose the smallest honest amount of process before coding.",
+    "focus": "Process calibration before coding",
+    "best_used_when": [
+      "You need to decide whether a task is tiny or substantial.",
+      "You need to choose between chat, a local note, or a GitHub issue.",
+      "You want to make architecture, review, or public-writing lanes explicit."
+    ],
+    "typical_prompts": [
+      "Is this a tiny task or substantial work?",
+      "Should this go into GitHub or stay in chat?",
+      "Do we need a checklist, an execution brief, or a full architecture pack?"
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/work-shaping-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Idea Validation",
+    "slug": "idea-validation",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/idea-validation",
+    "tagline": "Turn a raw product idea into a lean validation brief.",
+    "focus": "Idea validation before PRD or implementation",
+    "best_used_when": [
+      "The idea is interesting but still fuzzy.",
+      "You need a named buyer, pain, wedge, and proof path.",
+      "You want to test demand before turning the idea into a build order."
+    ],
+    "typical_prompts": [
+      "Validate this idea before we build it.",
+      "Who is the buyer and what painful recurring job are we removing?",
+      "What is the smallest wedge and the fastest proof path?"
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/idea-validation-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Product Shaping",
+    "slug": "product-shaping",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-shaping",
+    "tagline": "Use the smallest product framework that resolves the next decision.",
+    "focus": "Product framing after basic validation",
+    "best_used_when": [
+      "The idea has some signal, but strategy or positioning is still fuzzy.",
+      "You need to surface risky assumptions or choose experiments.",
+      "You want a concrete next lane instead of generic PM discussion."
+    ],
+    "typical_prompts": [
+      "Shape the product side without overdoing process.",
+      "Which framework fits this decision best?",
+      "Map the risky assumptions and tell me the next lane."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/product-shaping-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Product Council",
+    "slug": "product-council",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-council",
+    "tagline": "Stress-test a product decision with explicit multi-lens councils.",
+    "focus": "High-impact product decisions with competing lenses",
+    "best_used_when": [
+      "The real risk is in blind spots rather than missing raw ideation.",
+      "You want structured disagreement before committing to a direction.",
+      "A wedge, roadmap, pricing, or go/no-go call needs more than one perspective."
+    ],
+    "typical_prompts": [
+      "Run a product council on this.",
+      "Help me choose the wedge.",
+      "Do a roadmap council."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/product-council",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Spec Bundle",
+    "slug": "spec-bundle",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/spec-bundle",
+    "tagline": "Build an implementation-ready bundle when a PRD is not enough.",
+    "focus": "Execution-ready spec artifacts",
+    "best_used_when": [
+      "Execution needs contracts, schema, tests, or architecture artifacts.",
+      "The build crosses subsystems or has important invariants.",
+      "A plain PRD would leave too much room for ambiguity."
+    ],
+    "typical_prompts": [
+      "Turn this PRD into an implementation-ready spec bundle.",
+      "Add contracts, schema, and test plan.",
+      "Give me the minimum bundle I can hand to an agent."
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Inspired by Sereja Ris's PRD-first and draft-before-artifact planning patterns documented in sereja.tech. The canonical public source is codex-skills/spec-bundle; the former standalone repositories remain migration redirects."
+  },
+  {
+    "name": "JustDoIt",
+    "slug": "justdoit",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/justdoit",
+    "tagline": "Turn messy repo work into sequence-first, issue-first execution docs.",
+    "focus": "Durable execution planning for non-trivial repo work",
+    "best_used_when": [
+      "A repo task is too big for a one-shot answer but too underspecified for immediate coding.",
+      "You want another Codex run to resume from a canonical issue plus durable repo files instead of reconstructing context from chat.",
+      "You need the next execution slice and validation surface chosen before implementation begins."
+    ],
+    "typical_prompts": [
+      "Turn this task into a ready-to-execute plan.",
+      "Run the sequence-first planning flow for this repo task.",
+      "Prepare issue-first execution docs before we start coding."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/justdoit",
+    "origin_note": "Adapted from Sereja Ris's public justdoit skill, then rewritten into the current harness and routing setup."
+  },
+  {
+    "name": "Execution Pack",
+    "slug": "codex-execution-pack",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/codex-execution-pack",
+    "tagline": "Build a durable Codex operating pack from a PRD or raw brief.",
+    "focus": "Codex execution system with plan, status, tests, backlog, and prompts",
+    "best_used_when": [
+      "Codex needs AGENTS.md, plan, status, tests, backlog, and reusable prompts instead of a loose spec.",
+      "The work will span sessions and should resume from repo state rather than chat memory.",
+      "You need explicit validation gates, blocker compression, and review-repair prompts for a serious build."
+    ],
+    "typical_prompts": [
+      "Turn this PRD into a Codex execution pack.",
+      "Give me AGENTS, PLAN, STATUS, TEST_PLAN, and BACKLOG for this project.",
+      "Build a resumable execution pack with prompts for execute, resume, and blocker compression."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-execution-pack",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "AGX Orchestrator",
+    "slug": "agx-orchestrator",
+    "repo": "https://github.com/kiku-jw/agx-core/tree/main/skills/agx-orchestrator",
+    "tagline": "Use AGX as an optional bounded outside lane while Codex keeps judgment.",
+    "focus": "Optional bounded outside lane with durable task packets and local verification",
+    "best_used_when": [
+      "Codex should keep planning and final judgment, but one helper or skeptical review slice is narrow enough to dispatch safely.",
+      "You want saved task bundles, saved run results, and explicit path scope instead of chat-only external execution.",
+      "The task is already scoped and has local verification or can be given one now."
+    ],
+    "typical_prompts": [
+      "Route this through AGX once the packet is ready.",
+      "Keep planning here, but use AGX only for the bounded helper slice.",
+      "Turn this scoped change into an AGX packet with verification."
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Original public skill by Kiku, strongly shaped by Sereja Ris's layer-first routing ideas and the separation model shown in AI Corp."
+  },
+  {
+    "name": "Triage Finding",
+    "slug": "triage-finding",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/triage-finding",
+    "tagline": "Fact-check an external finding, detect duplicates, and give one honest verdict.",
+    "focus": "Fact-checking usefulness triage for links, repos, posts, videos, and saved findings",
+    "best_used_when": [
+      "You found a repo, article, post, screenshot, or video and need to know whether it matters now.",
+      "You want the claims checked against the primary source before acting on them.",
+      "A tool or skill may already exist locally and you want to avoid duplicate adoption.",
+      "A finding may deserve a skill, issue, note, or no action at all."
+    ],
+    "typical_prompts": [
+      "Triage this.",
+      "Look what I found.",
+      "Is this useful for us?",
+      "Review this ideas folder."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/triage-finding",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
+  },
+  {
+    "name": "Tool Scout",
+    "slug": "tool-scout",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/tool-scout",
+    "tagline": "Search current tools across multiple sources and recommend the best-fit option.",
+    "focus": "Multi-source build-vs-buy and ecosystem option research",
+    "best_used_when": [
+      "You need current tool options before spending engineering time or vendor budget.",
+      "The answer depends on what exists right now, not on memory.",
+      "You want GitHub, MCP, awesome-list, and web signals instead of a one-source answer.",
+      "You want a short list of strong candidates instead of a giant comparison dump."
+    ],
+    "typical_prompts": [
+      "Find tools for this.",
+      "What should we use for X?",
+      "Is there an MCP for this?",
+      "Find a Python library for PDF generation."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/tool-scout",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
+  },
+  {
+    "name": "Lazy Senior",
+    "slug": "lazy-senior",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior",
+    "tagline": "Make agents prove the smaller path before adding code.",
+    "focus": "Anti-overengineering code planning, review, and audit",
+    "best_used_when": [
+      "Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper.",
+      "You want a visible receipt for why custom code is necessary.",
+      "A diff needs a smaller-path review before commit or publication.",
+      "GitHub prior art should be checked before inventing a non-trivial implementation."
+    ],
+    "typical_prompts": [
+      "Use lazy-senior before implementing this.",
+      "Review this diff for overengineering.",
+      "Is there already a GitHub solution or architecture we should borrow?",
+      "What is the smallest correct version of this feature?"
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Dietrich Gebert",
+    "origin_repo": "https://github.com/DietrichGebert/ponytail",
+    "origin_note": "Inspired by Ponytail's anti-overengineering posture. This Codex skill adds evidence-backed GitHub prior-art checks, bounded read-only worker escalation, audit/status scripts, and strict benchmark gates."
+  },
+  {
+    "name": "ADR Log",
+    "slug": "adr-log",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/adr-log",
+    "tagline": "Record architecture decisions and trade-offs before reasoning disappears.",
+    "focus": "Durable architecture and execution decision capture",
+    "best_used_when": [
+      "A stack, schema, workflow, or vendor choice will be expensive to rediscover later.",
+      "You want trade-offs recorded in repo docs, issue state, or both.",
+      "A decision should stay visible even if it is later superseded."
+    ],
+    "typical_prompts": [
+      "Record this decision.",
+      "Write an ADR.",
+      "Log why we chose this."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/adr",
+    "origin_note": "Adapted for Codex from the adr skill in alenazaharovaux/share."
+  },
+  {
+    "name": "Issue Control Loop",
+    "slug": "issue-control-loop",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/issue-control-loop",
+    "tagline": "Keep one GitHub Issue canonical and generate issue-first execution scaffolds.",
+    "focus": "Canonical issue-driven workflow control with deterministic sequencing",
+    "best_used_when": [
+      "Work needs issue-first execution order and explicit handoff points.",
+      "You want machine-readable control state instead of vague chat status.",
+      "GitHub Issue and Project should become the real operator surface and the skill should emit ready-to-use scaffolds."
+    ],
+    "typical_prompts": [
+      "Turn this GitHub issue into a clean control loop.",
+      "Use the issue as the canonical handoff surface.",
+      "Run sequence-first and make this PRD issue-ready."
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/sereja.tech",
+    "origin_note": "Inspired by Sereja Ris's GitHub-as-memory and conversation-as-artifact workflow patterns, especially the context-separation model shown in ai-corp.sereja.tech.",
+    "origin_site": "https://ai-corp.sereja.tech/"
+  },
+  {
+    "name": "GitHub Mobile Ops",
+    "slug": "github-mobile-ops",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops",
+    "tagline": "Map Issues, Projects, and GitHub Mobile into a phone-first operator workflow.",
+    "focus": "Phone-first GitHub operator workflow",
+    "best_used_when": [
+      "You want to control work from a phone without losing canonical task state.",
+      "Issues, Projects, and GitHub Mobile are being used inconsistently and need a cleaner split.",
+      "You need to know what still requires a laptop and what can stay mobile-first."
+    ],
+    "typical_prompts": [
+      "How should GitHub work from my phone?",
+      "Give me a phone-first issue and project workflow.",
+      "What belongs in GitHub Mobile versus desktop?"
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Continuity Ledger",
+    "slug": "continuity-ledger",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/continuity-ledger",
+    "tagline": "Keep substantial work coherent with a factual CONTINUITY.md.",
+    "focus": "Durable continuity across long-running work",
+    "best_used_when": [
+      "The task will span sessions, branches, or long tool loops.",
+      "Chat memory is not a safe source of truth.",
+      "You need one short durable bridge between source artifacts and current state."
+    ],
+    "typical_prompts": [
+      "Keep continuity on this task.",
+      "Update the ledger before we continue.",
+      "Do not let this drift across sessions."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/continuity-ledger-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Adversarial Review",
+    "slug": "adversarial-review",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review",
+    "tagline": "Run a skeptical second-pass review that hunts for failures, not style nits.",
+    "focus": "Findings-first second-pass review for risky diffs",
+    "best_used_when": [
+      "A meaningful diff needs a real sign-off pass before anyone trusts it.",
+      "Agent-generated output looks plausible, but you want failure-hunting rather than approval theater.",
+      "The most important question is what can break, not how elegant the patch looks."
+    ],
+    "typical_prompts": [
+      "Do an adversarial review on this diff.",
+      "Look for bugs and regressions here.",
+      "Give me a findings-first second pass."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Visual Explainer",
+    "slug": "visual-explainer",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/visual-explainer",
+    "tagline": "Turn structure-heavy material into a clean self-contained HTML artifact.",
+    "focus": "Browser-readable HTML explainers for systems, tables, and timelines",
+    "best_used_when": [
+      "A diagram, system map, comparison, or wide table is clearer in a browser than in chat.",
+      "You want a shareable HTML artifact rather than a prose summary.",
+      "The main challenge is making structure visually legible."
+    ],
+    "typical_prompts": [
+      "Visualize this.",
+      "Make a diagram for this system.",
+      "Render this table as HTML."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/visual-explainer",
+    "origin_note": "Adapted for Codex from alenazaharovaux/share; that upstream skill credits nicobailon/visual-explainer as the original MIT base."
+  },
+  {
+    "name": "AI Writing Detox",
+    "slug": "ai-writing-detox",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/ai-writing-detox",
+    "tagline": "Remove obvious AI-writing tics without flattening the real voice.",
+    "focus": "Cleanup pass for public-facing drafts",
+    "best_used_when": [
+      "A draft is directionally fine but sounds generically AI-written.",
+      "Public notes, posts, README copy, or build diaries need more trust and less stylistic fog.",
+      "You want a quick editing pass before publishing or committing docs."
+    ],
+    "typical_prompts": [
+      "Make this sound less AI.",
+      "Detox this draft.",
+      "Clean up this README copy."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/ai-writing-detox",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
+  },
+  {
+    "name": "Public Artifact Lane",
+    "slug": "public-artifact-lane",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane",
+    "tagline": "Turn real work into public-ready artifacts with evidence-first framing.",
+    "focus": "Public-facing artifacts from real work",
+    "best_used_when": [
+      "You finished real work and want a public artifact instead of leaving it in chat.",
+      "You need release notes, launch posts, or case studies grounded in actual changes.",
+      "You want a shareable writeup that does not invent results."
+    ],
+    "typical_prompts": [
+      "Write a build diary from this work.",
+      "Make release notes.",
+      "Prepare a launch writeup."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Illustration Prompt",
+    "slug": "illustration-prompt",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/illustration-prompt",
+    "tagline": "Turn vague image ideas and refs into precise generator-ready prompts.",
+    "focus": "Visual direction and prompt structuring for image generation",
+    "best_used_when": [
+      "You need a prompt for a hero image, card visual, cover, or campaign illustration.",
+      "Reference images should shape the result, but the user has not translated them into a precise brief.",
+      "The visual request is still too vague for reliable image generation."
+    ],
+    "typical_prompts": [
+      "Write an illustration prompt.",
+      "Help me make an image prompt from these refs.",
+      "Turn this vague idea into a Midjourney prompt."
+    ],
+    "origin_type": "adapted",
+    "origin_author": "Alena Zakharova",
+    "origin_repo": "https://github.com/alenazaharovaux/share/tree/main/skills/illustration-prompt",
+    "origin_note": "Codex-focused rewrite of the upstream Claude skill from alenazaharovaux/share."
+  },
+  {
+    "name": "README Generator",
+    "slug": "readme-generator",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/readme-generator",
+    "tagline": "Create or rewrite a human-first README without doc bloat.",
+    "focus": "README quality and public repo framing",
+    "best_used_when": [
+      "A repo needs a clearer public front page with a real quick start.",
+      "The current README is vague, stale, or reads like internal notes.",
+      "The project mixes multiple roles and needs explicit top-level taxonomy."
+    ],
+    "typical_prompts": [
+      "Write a README for this repo.",
+      "Rewrite this README to be clearer for outsiders.",
+      "Refresh the quick start and usage sections."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills/tree/main/readme-generator",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Session to Post",
+    "slug": "session-to-post",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/session-to-post",
+    "tagline": "Turn a finished coding session into a durable draft.",
+    "focus": "End-of-session writing from real artifacts",
+    "best_used_when": [
+      "A meaningful coding session is done and you want a build diary or post seed.",
+      "The story lives across diff, notes, and transcript and should not be rewritten manually.",
+      "You want end-of-session capture to be callable in plain language instead of only by CLI."
+    ],
+    "typical_prompts": [
+      "Turn this session into a post draft.",
+      "Write a build diary from this diff and notes.",
+      "Make an end-of-session writeup from today's work."
+    ],
+    "origin_type": "inspired",
+    "origin_author": "Sereja Ris",
+    "origin_repo": "https://github.com/serejaris/blog-pipeline-template",
+    "origin_note": "Inspired by serejaris/blog-pipeline-template and the dev-diary writing patterns published in serejaris/sereja.tech."
+  },
+  {
+    "name": "Video Builder",
+    "slug": "video-builder",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/video-builder",
+    "tagline": "Assemble narrated videos from scripts with ffmpeg and TTS.",
+    "focus": "Narrated video assembly with ffmpeg and edge-tts",
+    "best_used_when": [
+      "You need to turn a script into a narrated mp4 quickly.",
+      "You want line-level visual timing without manual video editing.",
+      "You need a reproducible pipeline from text and stills."
+    ],
+    "typical_prompts": [
+      "Build a short narrated video from this script.",
+      "Render a 2-minute explainer with edge-tts voiceover.",
+      "Assemble an mp4 from these lines and images."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/video-builder-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Autonomous Video Pipeline",
+    "slug": "autonomous-video-pipeline",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline",
+    "tagline": "Produce verified short-form video packages with manifests and QA evidence.",
+    "focus": "End-to-end explainer and avatar video production workflow",
+    "best_used_when": [
+      "A short-form explainer, avatar, tutorial, or YouTube-ready video needs more than a simple render script.",
+      "The work should track narration chunks, storyboard scenes, provider outputs, render commands, QA frames, and ffprobe evidence.",
+      "You need a provider-neutral workflow that can pause on paid APIs, cloned voices, private accounts, or upload-readiness risks."
+    ],
+    "typical_prompts": [
+      "Use autonomous-video-pipeline to produce a verified explainer video package.",
+      "Create the production contract, storyboard, render manifest, and QA plan for this video.",
+      "Build a local placeholder MP4 package and validate it before we call paid providers."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Browser Tutorial Video",
+    "slug": "browser-tutorial-video",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/browser-tutorial-video",
+    "tagline": "Record repeatable browser walkthrough MP4s from job specs.",
+    "focus": "Browser tutorial video recording with job specs, cursor highlights, click audio, QA frames, and ffmpeg",
+    "best_used_when": [
+      "A browser workflow, app tutorial, or PDF scroll should become a real MP4 artifact.",
+      "A simple walkthrough should be captured from a reusable job file before custom recorder code is needed.",
+      "The output needs large cursor movement, early target highlights, click ripples, and click sound.",
+      "Localized or repeated variants should be rendered without manual video editing.",
+      "A finished walkthrough needs QA frames, contact sheets, and metadata checks before sign-off."
+    ],
+    "typical_prompts": [
+      "Record this browser walkthrough as a polished tutorial video.",
+      "Create a reusable tutorial job spec and render a smoke MP4.",
+      "Make localized demo videos for these URLs.",
+      "Capture this PDF scroll with cursor highlights and click audio.",
+      "Generate QA frames and a contact sheet for this walkthrough video."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Long Context Dispatch",
+    "slug": "long-context-dispatch",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/long-context-dispatch",
+    "tagline": "Delegate large read-only analysis while Codex keeps final judgment.",
+    "focus": "Read-only large-context analysis delegation",
+    "best_used_when": [
+      "A repo audit, due-diligence pass, literature synthesis, or policy mapping genuinely needs a larger context window.",
+      "The parent Codex thread should keep synthesis, editing decisions, and final judgment.",
+      "The child analysis must stay read-only and scoped to explicit paths or documents."
+    ],
+    "typical_prompts": [
+      "Use long-context-dispatch for this repo audit.",
+      "Send this large read-only analysis to the long-context worker.",
+      "Keep judgment here, but delegate the big synthesis pass."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Parallel Worktrees",
+    "slug": "parallel-worktrees",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/parallel-worktrees",
+    "tagline": "Split substantial work into isolated git worktree lanes.",
+    "focus": "Isolated git lanes for substantial multi-track work",
+    "best_used_when": [
+      "A substantial task has separable implementation, tests, docs, review, or experiment lanes.",
+      "The main checkout should stay clean while risky or independent work proceeds.",
+      "Multiple agents or sessions need explicit branch and path ownership."
+    ],
+    "typical_prompts": [
+      "Use parallel worktrees for this.",
+      "Split implementation and review into separate worktrees.",
+      "Create isolated lanes for this risky experiment."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/codex-skills",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Transcribe",
+    "slug": "transcribe",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/transcribe",
+    "tagline": "Route audio and video transcription into the smallest honest lane.",
+    "focus": "Audio and video transcription with optional diarized speaker labels",
+    "best_used_when": [
+      "Audio or video needs a clean transcript artifact.",
+      "Speaker labels, diarization, or known-speaker hints are required.",
+      "The workflow should keep API keys in environment variables and save repeatable outputs."
+    ],
+    "typical_prompts": [
+      "Transcribe this audio file.",
+      "Transcribe this video with speaker labels.",
+      "Save a clean transcript artifact for this recording."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/transcribe-skill",
+    "origin_note": "Original public skill by Kiku."
+  },
+  {
+    "name": "Spreadsheet",
+    "slug": "spreadsheet",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/spreadsheet",
+    "tagline": "Route spreadsheet work into tabular analysis or workbook-safe editing.",
+    "focus": "Spreadsheet analysis, reshaping, and `.xlsx` editing with validation",
+    "best_used_when": [
+      "CSV or TSV data needs aggregation, filtering, joins, metrics, or reshaping with checked outputs.",
+      "An `.xlsx` workbook needs targeted edits while preserving formulas, formatting, references, and layout.",
+      "The task needs an explicit lane before analysis accidentally breaks workbook semantics."
+    ],
+    "typical_prompts": [
+      "Analyze this spreadsheet and export the summary.",
+      "Edit this workbook without breaking formulas.",
+      "Reshape this CSV and preserve source columns."
+    ],
+    "origin_type": "original",
+    "origin_author": "Kiku",
+    "origin_repo": "https://github.com/kiku-jw/spreadsheet-skill",
+    "origin_note": "Original public skill by Kiku."
+  }
+]

@@ -28,6 +28,10 @@ jobs:
           done < <(find . -mindepth 2 -maxdepth 2 -name SKILL.md -print | sed 's#/SKILL.md##' | sort)
           python .system/skill-creator/scripts/quick_validate.py .system/skill-creator
           python .system/skill-creator/scripts/quick_validate.py .system/skill-installer
+      - name: Validate public catalog
+        run: |
+          python -m json.tool catalog/skills.json >/dev/null
+          ! grep -R -E 'superpowers|codex-autonomous-delivery' catalog
       - name: Test session-to-post
         run: PYTHONPATH=session-to-post/src python -m pytest -q session-to-post/tests
       - name: Test issue-control-loop
