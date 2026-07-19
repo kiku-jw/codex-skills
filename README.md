@@ -70,7 +70,6 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Lazy Senior | Anti-overengineering code planning, review, and audit | Codex is about to add a dependency, parser, widget, wrapper, CLI, cache, queue, scheduler, state machine, or reusable helper | [codex-skills/lazy-senior](https://github.com/kiku-jw/codex-skills/tree/main/lazy-senior) | Inspired by [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) |
 | ADR Log | Capturing architecture decisions and trade-offs | A stack, schema, workflow, or vendor choice needs durable rationale | [adr-log](https://github.com/kiku-jw/codex-skills/tree/main/adr-log) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/adr) |
 | Issue Control Loop | Keeping one GitHub Issue canonical for humans and agents | Work needs issue-first execution order, deterministic scaffolds, or explicit machine-readable control | [issue-control-loop](https://github.com/kiku-jw/codex-skills/tree/main/issue-control-loop) | Inspired by [Sereja Ris](https://sereja.tech/) and [AI Corp](https://ai-corp.sereja.tech/) |
-| Codex Autonomous Delivery | Codex-first execution lane with issue-first flow | One main Codex lane should take work from PRD or request through issue, plan, execution, verification, and optional AGX review | [superpowers/codex-autonomous-delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery) | Original by Kiku |
 | GitHub Mobile Ops | Phone-first GitHub operator workflow | You want Issues, Projects, and GitHub Mobile to act as a real control surface from the phone | [codex-skills/github-mobile-ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops) | Original by Kiku |
 | Continuity Ledger | Keeping substantial work coherent across sessions | The work is long-running and chat memory is not a safe source of truth | [continuity-ledger-skill](https://github.com/kiku-jw/codex-skills/tree/main/continuity-ledger) | Original by Kiku |
 | Adversarial Review | Skeptical second-pass review for risky diffs | A meaningful diff needs a findings-first pass focused on bugs, regressions, security, and missing tests | [codex-skills/adversarial-review](https://github.com/kiku-jw/codex-skills/tree/main/adversarial-review) | Original by Kiku |
@@ -373,26 +372,6 @@ Typical prompts:
 - `Turn this GitHub issue into a clean control loop.`
 - `Use the issue as the canonical handoff surface.`
 - `Parse this PRD and make it issue-ready.`
-
-### [Codex Autonomous Delivery](https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery)
-
-Keep one main Codex lane responsible for the whole build.
-
-What it does:
-- keeps planning, implementation, and verification in one Codex-first lane
-- treats the PRD as living product truth, not direct execution input
-- prefers `issue-control-loop sequence` and GitHub issue first for substantial work
-- uses AGX only as an optional skeptical review or cheap helper lane
-
-Good use cases:
-- You want Codex to carry the work from request or PRD through execution and verification.
-- The task is substantial and should run from a canonical issue plus durable local mirrors.
-- You want outside help to stay optional and bounded rather than becoming a second control plane.
-
-Typical prompts:
-- `Use codex-autonomous-delivery for this feature.`
-- `Take this from PRD to issue to execution without leaving Codex.`
-- `Keep this Codex-first and use AGX only if a bounded review lane is worth it.`
 
 ### [GitHub Mobile Ops](https://github.com/kiku-jw/codex-skills/tree/main/github-mobile-ops)
 
