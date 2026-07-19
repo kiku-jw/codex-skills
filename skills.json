@@ -618,25 +618,5 @@
     "origin_author": "Kiku",
     "origin_repo": "https://github.com/kiku-jw/spreadsheet-skill",
     "origin_note": "Original public skill by Kiku."
-  },
-  {
-    "name": "Codex Autonomous Delivery",
-    "slug": "codex-autonomous-delivery",
-    "repo": "https://github.com/kiku-jw/superpowers/tree/main/skills/codex-autonomous-delivery",
-    "tagline": "Keep one main Codex lane responsible from issue to verification.",
-    "focus": "Codex-first execution lane with issue-first flow",
-    "best_used_when": [
-      "One main Codex lane should take work from request or PRD through issue, plan, execution, and verification.",
-      "The task is substantial and should run from a canonical issue plus durable local mirrors.",
-      "You want AGX to stay optional and bounded instead of becoming a second control plane."
-    ],
-    "typical_prompts": [
-      "Use codex-autonomous-delivery for this feature.",
-      "Take this from PRD to issue to execution without leaving Codex.",
-      "Keep this Codex-first and use AGX only if a bounded review lane is worth it."
-    ],
-    "origin_type": "original",
-    "origin_author": "Kiku",
-    "origin_repo": "https://github.com/kiku-jw/superpowers"
   }
 ]
