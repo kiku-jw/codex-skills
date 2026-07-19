@@ -1,8 +1,10 @@
-# Awesome AI Skills by Kiku
+# Public Skill Catalog
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of public AI workflow skills maintained by Kiku.
+A curated discovery layer for the public AI workflow skills maintained by
+Kiku. The installable skill sources live in this repository's top-level skill
+directories; this catalog adds use cases, routing context, and attribution.
 
 These skills are built for agent-assisted product work: shaping ideas, controlling execution through durable surfaces, reducing ambiguity, and turning real work into durable outputs. Some are original Kiku skills, some are Codex-focused adaptations, and some are explicit inspirations from public upstream work. This list intentionally includes only public skills. Organization-specific and other private workflows are maintained separately and are not mixed into this catalog.
 
@@ -14,7 +16,7 @@ Most "prompt lists" are just snippets. These are operational skills: small, opin
 
 Core build lane:
 
-`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> Issue Control Loop -> JustDoIt -> Codex Autonomous Delivery -> Adversarial Review`
+`Work Shaping -> Idea Validation -> Product Shaping -> Product Council (if needed) -> Spec Bundle -> Issue Control Loop -> JustDoIt -> Adversarial Review`
 
 Workflow extensions:
 
@@ -27,7 +29,6 @@ Workflow extensions:
 - `Execution Pack` when Codex needs AGENTS, plan, status, tests, backlog, and resumable prompts instead of a loose spec.
 - `AGX Orchestrator` when Codex should keep planning and final judgment and use AGX only for an optional bounded outside lane.
 - `Issue Control Loop` when GitHub should hold canonical task state, choose issue-first execution order, and generate deterministic scaffolds.
-- `Codex Autonomous Delivery` when one main Codex lane should carry the work from planning through verification with GitHub issue first and AGX optional.
 - `GitHub Mobile Ops` when the operator surface is phone-first and GitHub Mobile should stay a control layer, not pretend to be a dev box.
 - `Continuity Ledger` when the task is long enough that chat memory will drift.
 - `Adversarial Review` when a meaningful diff deserves a skeptical bug, regression, and security pass before sign-off.
