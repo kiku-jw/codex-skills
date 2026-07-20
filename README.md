@@ -90,8 +90,9 @@ service, operational source of truth, or experiment stays independent even if
 it also exposes a skill-shaped entry point.
 
 Imported repositories retain their source commits through non-squashed history
-merges. Their former repositories remain as read-only migration redirects after
-the canonical copies are verified.
+merges. Superseded source repositories were removed after their canonical
+copies and histories were verified; former names and destinations are recorded
+in [MIGRATIONS.md](MIGRATIONS.md).
 
 ## Validation
 
