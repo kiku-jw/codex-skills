@@ -123,6 +123,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for repository boundaries and test
 expectations. Report vulnerabilities through GitHub's private vulnerability
 reporting flow when available; see [SECURITY.md](SECURITY.md).
 
+## Follow the work
+
+Skill releases and project notes: [Telegram](https://t.me/kiku_ai) ·
+[LinkedIn](https://www.linkedin.com/in/kiku-jw/) ·
+[KikuAI](https://kikuai.dev/)
+
 ## Licenses
 
 This repository is not uniformly licensed. Original KikuAI Lab material is MIT
