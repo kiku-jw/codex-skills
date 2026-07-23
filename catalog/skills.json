@@ -448,6 +448,27 @@
     "origin_note": "Original public skill by Kiku."
   },
   {
+    "name": "GitHub SEO",
+    "slug": "github-seo",
+    "repo": "https://github.com/kiku-jw/codex-skills/tree/main/github-seo",
+    "tagline": "Improve repository and site discoverability without SEO theater.",
+    "focus": "Truth-first GitHub discoverability and canonical-site SEO routing",
+    "best_used_when": [
+      "A public repository needs better metadata, README framing, or proof-backed discovery.",
+      "A GitHub Pages app or canonical product site needs a bounded SEO baseline.",
+      "A portfolio needs to separate real website SEO candidates from repo-only and skip surfaces."
+    ],
+    "typical_prompts": [
+      "Audit this repository for GitHub discoverability.",
+      "Improve the SEO of this GitHub Pages project.",
+      "Which repositories deserve website SEO and which only need README work?"
+    ],
+    "origin_type": "adapted",
+    "origin_author": "AgriciDaniel",
+    "origin_repo": "https://github.com/AgriciDaniel/claude-seo/tree/09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01",
+    "origin_note": "Narrow Codex and KikuAI adaptation of the MIT-licensed upstream at commit 09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01, rewritten for GitHub surface classification, proof gates, and dependency-free execution."
+  },
+  {
     "name": "Session to Post",
     "slug": "session-to-post",
     "repo": "https://github.com/kiku-jw/codex-skills/tree/main/session-to-post",

@@ -37,6 +37,7 @@ Workflow extensions:
 - `Public Artifact Lane` when real work should become a public-ready artifact.
 - `Illustration Prompt` when vague image requests need structure, references, and generator-ready precision.
 - `README Generator` when a repo needs a truthful front page instead of internal-doc sprawl.
+- `GitHub SEO` when repository discoverability and real website SEO need to be separated before making changes.
 - `Session to Post` when the work is done and needs a durable writeup.
 - `Browser Tutorial Video` when a real browser workflow should become a repeatable polished MP4 with job specs, cursor highlights, click audio, and QA frames.
 - `Long Context Dispatch` when a large read-only analysis genuinely needs a bigger context window while Codex keeps judgment.
@@ -79,6 +80,7 @@ Some public skills now live inside multi-skill repos. When that is the case, the
 | Public Artifact Lane | Turning real work into public-ready artifacts | You need a build diary, release notes, launch post, or case study from real work | [public-artifact-lane](https://github.com/kiku-jw/codex-skills/tree/main/public-artifact-lane) | Original by Kiku |
 | Illustration Prompt | Turning vague image ideas into structured prompts | You need a generator-ready image prompt, especially when references should shape the result | [illustration-prompt](https://github.com/kiku-jw/codex-skills/tree/main/illustration-prompt) | Adapted from [alenazaharovaux/share](https://github.com/alenazaharovaux/share/tree/main/skills/illustration-prompt) |
 | README Generator | Creating a human-first repo front page | A repo needs a clear README with real quick start, useful taxonomy, and less doc bloat | [readme-generator-skill](https://github.com/kiku-jw/codex-skills/tree/main/readme-generator) | Original by Kiku |
+| GitHub SEO | Separating repository discoverability from website SEO | A public repo, Pages app, or canonical product site needs a truth-first visibility audit and one bounded improvement | [codex-skills/github-seo](https://github.com/kiku-jw/codex-skills/tree/main/github-seo) | Adapted from MIT-licensed [AgriciDaniel/claude-seo@09d37c7](https://github.com/AgriciDaniel/claude-seo/tree/09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01) |
 | Session to Post | Turning real coding work into a durable draft | A meaningful coding session is done and you want a build diary, post seed, or end-of-session writeup from the real artifacts | [session-to-post](https://github.com/kiku-jw/codex-skills/tree/main/session-to-post) | Inspired by [serejaris/blog-pipeline-template](https://github.com/serejaris/blog-pipeline-template) |
 | Video Builder | Assemble narrated videos from scripts | You need a repeatable pipeline to render a narrated mp4 with TTS and simple visuals | [video-builder-skill](https://github.com/kiku-jw/codex-skills/tree/main/video-builder) | Original by Kiku |
 | Autonomous Video Pipeline | Verified short-form video production packages | A short-form explainer, avatar, tutorial, or YouTube-ready video needs manifests, scene planning, provider adapters, ffprobe metadata, QA frames, and final package validation | [codex-skills/autonomous-video-pipeline](https://github.com/kiku-jw/codex-skills/tree/main/autonomous-video-pipeline) | Original by Kiku |
@@ -531,6 +533,32 @@ Typical prompts:
 - `Rewrite this README to be clearer for outsiders.`
 - `Refresh the quick start and usage sections.`
 
+### [GitHub SEO](https://github.com/kiku-jw/codex-skills/tree/main/github-seo)
+
+Choose the real discoverability surface before changing repository metadata,
+README content, a GitHub Pages app, or a canonical product site.
+
+Provenance note: this is a narrow adaptation of the MIT-licensed
+[`AgriciDaniel/claude-seo@09d37c7`](https://github.com/AgriciDaniel/claude-seo/tree/09d37c7b66ed3ca9c6efbdb765a805a6c76a8f01)
+methodology. It does not vendor the upstream runtime or the separately
+published `codex-seo` repository.
+
+What it does:
+- classifies the target as repo-only, Pages product, canonical site, or support surface
+- keeps GitHub discovery work separate from search-engine claims about a website
+- requires repo-native proof, verification, and a failure check for each recommendation
+- defaults redirects, infrastructure, and unproven prototypes to `skip` or `wait-for-proof`
+
+Good use cases:
+- A repository needs better topics, description, homepage, or first-screen framing.
+- A GitHub Pages project needs a crawlability and canonical baseline.
+- A portfolio needs to identify which projects deserve real website SEO.
+
+Typical prompts:
+- `Audit this repository for GitHub discoverability.`
+- `Improve the SEO of this GitHub Pages project.`
+- `Which repositories deserve website SEO and which only need README work?`
+
 ### [Session to Post](https://github.com/kiku-jw/codex-skills/tree/main/session-to-post)
 
 Turn a finished coding session into a durable draft instead of leaving the lessons trapped in chat and diffs.
@@ -730,6 +758,7 @@ Typical prompts:
 - Use Public Artifact Lane when real work should become a public-ready artifact.
 - Use Illustration Prompt when the real problem is visual direction and reference interpretation, not image generation itself.
 - Use README Generator when the repo needs a clear public entry point more than deeper internal docs.
+- Use GitHub SEO when you must classify the real public surface before changing repository metadata, a Pages app, or a canonical site.
 - Use Session to Post when the work is already real and you want a durable writeup from the session artifacts.
 - Use Autonomous Video Pipeline when the output should be a verified short-form video package with a manifest, storyboard, render metadata, QA frames, and explicit provider boundaries.
 - Use Browser Tutorial Video when the output should be an actual polished browser walkthrough MP4.

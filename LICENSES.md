@@ -6,6 +6,7 @@ file. Do not remove those files when copying or packaging a skill.
 | Scope | License | Canonical text |
 | --- | --- | --- |
 | Repository content without a more specific directory license | MIT | [`LICENSE`](LICENSE) |
+| `github-seo` | MIT | [`github-seo/LICENSE`](github-seo/LICENSE), [`github-seo/NOTICE.md`](github-seo/NOTICE.md) |
 | `work-shaping`, `idea-validation`, `product-shaping`, `spec-bundle`, `continuity-ledger` | AGPL-3.0 | each directory's `LICENSE` |
 | `spreadsheet`, `spreadsheet-xlsx-edit`, `spreadsheet-tabular-analysis` | Apache-2.0 | [`spreadsheet/LICENSE.txt`](spreadsheet/LICENSE.txt) |
 | `transcribe`, `transcribe-basic`, `transcribe-diarize` | Apache-2.0 | [`transcribe/LICENSE.txt`](transcribe/LICENSE.txt) |
