@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub SEO"
+  short_description: "Improve repository and site discoverability without SEO theater"
+  default_prompt: "Use $github-seo to classify this repository's real public surface and recommend the smallest evidence-backed discoverability improvement."

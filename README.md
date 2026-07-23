@@ -37,6 +37,7 @@ repositories.
 - `illustration-prompt`
 - `public-artifact-lane`
 - `readme-generator`
+- `github-seo`
 - `session-to-post`
 - `visual-explainer`
 
