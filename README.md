@@ -80,9 +80,6 @@ The public descriptions, use cases, and attribution index live in the
 [repository catalog](catalog/README.md). Its machine-readable form is
 [`catalog/skills.json`](catalog/skills.json).
 
-Organization-specific workflows are intentionally excluded from this public repository
-and kept outside this public repository.
-
 ## Repository policy
 
 A workflow belongs here when its primary lifecycle is that of a reusable skill
@@ -110,6 +107,7 @@ find . -mindepth 2 -maxdepth 2 -name SKILL.md -print \
 python3 .system/skill-creator/scripts/quick_validate.py .system/skill-creator
 python3 .system/skill-creator/scripts/quick_validate.py .system/skill-installer
 python3 -m json.tool catalog/skills.json >/dev/null
+python3 scripts/check_public_privacy.py
 
 PYTHONPATH=session-to-post/src python3 -m pytest -q session-to-post/tests
 PYTHONPATH=issue-control-loop/src python3 -m pytest -q issue-control-loop/tests

@@ -8,7 +8,7 @@ Keep changes scoped to one skill or one repository-wide policy.
   compatible agent workflow.
 - Keep standalone products, libraries, services, operational runbooks, and
   experiments in independent repositories.
-- Keep Organization-specific workflows private and outside this repository.
+- Keep organization-specific and private workflows outside this repository.
 - Preserve a directory's existing license and provenance.
 
 ## Skill shape

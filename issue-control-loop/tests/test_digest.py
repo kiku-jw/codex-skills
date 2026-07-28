@@ -42,13 +42,40 @@ def test_comment_ops_state_overrides_issue_body() -> None:
         comments=[
             {
                 "body": """<!-- issue-control-state:start -->
-{"schemaVersion":1,"state":"awaiting_review","owner":"KikuAI Lab","updatedAt":"2026-03-07T12:00:00Z"}
+{"schemaVersion":1,"state":"awaiting_review","owner":"Operator","updatedAt":"2026-03-07T12:00:00Z"}
 <!-- issue-control-state:end -->"""
             }
         ],
     )
     assert result["section"] == "waitingOnOperator"
     assert result["reason"] == "awaiting operator review"
+
+
+def test_operator_owner_waits_for_operator() -> None:
+    item = ProjectItem(
+        item_id="pvti_3",
+        issue_repo="acme/ops",
+        issue_number=12,
+        issue_url="https://github.com/acme/ops/issues/12",
+        title="Operator decision",
+        status="Todo",
+        approval="Needs Review",
+        destination="Build",
+        kind="Task",
+        priority="P2",
+    )
+    result = classify_item(
+        item,
+        issue_body="""Body
+
+<!-- issue-control-meta:start -->
+{"state":"ready","owner":"Operator"}
+<!-- issue-control-meta:end -->
+""",
+        comments=None,
+    )
+    assert result["section"] == "waitingOnOperator"
+    assert result["reason"] == "waiting on operator decision"
 
 
 def test_digest_counts_sections() -> None:

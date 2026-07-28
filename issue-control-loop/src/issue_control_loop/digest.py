@@ -67,7 +67,7 @@ def waiting_on_operator(meta: dict[str, Any]) -> bool:
     state = str(meta.get("state", "")).strip().lower()
     owner = str(meta.get("owner", "")).strip().lower()
     blocked_on = str(meta.get("blockedOn", "")).strip().lower()
-    return owner in {"operator", "operator"} or "operator" in blocked_on or needs_human_decision(meta) or state in {
+    return owner == "operator" or "operator" in blocked_on or needs_human_decision(meta) or state in {
         "awaiting_review",
         "paused",
     }

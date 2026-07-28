@@ -15,7 +15,7 @@ from typing import Any
 
 
 DEFAULT_JOB_ROOT = Path.home() / ".codex" / "tmp" / "long-context-jobs"
-DEFAULT_LAUNCHER = Path("~/.local/bin/codex-long")
+DEFAULT_LAUNCHER = Path.home() / ".local" / "bin" / "codex-long"
 DEFAULT_TIMEOUT_SECONDS = 45 * 60
 DEFAULT_PROGRESS_INTERVAL_SECONDS = 15
 TERMINAL_STATES = {"succeeded", "failed", "timed_out"}

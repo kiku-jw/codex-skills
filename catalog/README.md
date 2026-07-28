@@ -6,7 +6,7 @@ A curated discovery layer for the public AI workflow skills maintained by
 Kiku. The installable skill sources live in this repository's top-level skill
 directories; this catalog adds use cases, routing context, and attribution.
 
-These skills are built for agent-assisted product work: shaping ideas, controlling execution through durable surfaces, reducing ambiguity, and turning real work into durable outputs. Some are original Kiku skills, some are Codex-focused adaptations, and some are explicit inspirations from public upstream work. This list intentionally includes only public skills. Organization-specific and other private workflows are maintained separately and are not mixed into this catalog.
+These skills are built for agent-assisted product work: shaping ideas, controlling execution through durable surfaces, reducing ambiguity, and turning real work into durable outputs. Some are original Kiku skills, some are Codex-focused adaptations, and some are explicit inspirations from public upstream work. This list intentionally includes only public skills.
 
 ## Why this list exists
 
